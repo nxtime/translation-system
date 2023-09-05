@@ -7,7 +7,7 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "locales/*": ["./public/locales/*"],
+      "locales/*": ["./src/locales/*"],
       "interfaces/*": ["./src/interfaces/*"]
     },
     /* Bundler mode */

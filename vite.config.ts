@@ -31,7 +31,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      "locales": fileURLToPath(new URL("./public/locales", import.meta.url)),
+      "locales": fileURLToPath(new URL("./src/locales", import.meta.url)),
       "interfaces": fileURLToPath(new URL("./src/interfaces", import.meta.url)),
     },
   },

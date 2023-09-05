@@ -1,4 +1,4 @@
-import { TTranslation } from '../../public/locales/index';
+import { TTranslation } from '../locales/index';
 type TLanguages = "pt-BR" | "en" | "es";
 type TxKeyPath = RecursiveKeyOf<TTranslation>;
 type RecursiveKeyOf<TObj extends object> = {
