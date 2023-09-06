@@ -4,6 +4,7 @@ const SpanishTranslation: TTranslation = {
   common: {
     ok: "Aceptar",
     error: "Error",
+    "not-found": "Não encontrado",
     cancel: "Cancelar",
     back: "Volver",
     name: "Nombre",
@@ -18,9 +19,10 @@ const SpanishTranslation: TTranslation = {
     logout: "Cerrar sesión",
     new: "Nuevo",
     workgroups: "Grupos de Trabajo",
-    scalesgroups: "Grupos de Escalas",
+    scalesgroups: "Grupo de Escalas",
     scales: "Escalas",
     company: "Empresa",
+    remove: "Remover",
     companies: "Empresas",
     database: "Bases de Datos",
     theme: "Tema",
@@ -49,6 +51,21 @@ const SpanishTranslation: TTranslation = {
   },
   settings: {
     "application-title": "Seleccione una empresa y una base de datos",
+    tabs: {
+      application: "Applicacion",
+      personal: "Pessoal",
+    },
+    themes: {
+      coffe: "Café",
+      light: "Claro",
+      dark: "Oscuro",
+      forest: "Bosque",
+    },
+    langs: {
+      english: "Inglés",
+      portuguese: "Portugués",
+      spanish: "Español",
+    },
   },
   table: {
     page: "Página",
@@ -71,7 +88,7 @@ const SpanishTranslation: TTranslation = {
   },
   messages: {
     "not-found": "Nenhum(a) {{item}} foi encontrado(a)",
-    typing: "Digite o(a) {{item}}..."
+    typing: "Digite o(a) {{item}}...",
   },
   data: {
     workgroups: {
@@ -88,19 +105,8 @@ const SpanishTranslation: TTranslation = {
       name: "Nombre",
       timeScale: "Escala de Tiempo",
       workGroups: "Grupos de Trabajo",
-      breaks: "Intervalos"
+      breaks: "Intervalos",
     },
-  },
-  themes: {
-    coffe: "Café",
-    light: "Claro",
-    dark: "Oscuro",
-    forest: "Bosque",
-  },
-  langs: {
-    english: "Inglés",
-    portuguese: "Portugués",
-    spanish: "Español",
   },
 };
 

@@ -1,6 +1,7 @@
 declare const EnglishTranslation: {
     common: {
         ok: string;
+        "not-found": string;
         error: string;
         cancel: string;
         back: string;
@@ -18,6 +19,7 @@ declare const EnglishTranslation: {
         workgroups: string;
         scalesgroups: string;
         scales: string;
+        remove: string;
         company: string;
         companies: string;
         database: string;
@@ -47,6 +49,21 @@ declare const EnglishTranslation: {
     };
     settings: {
         "application-title": string;
+        tabs: {
+            personal: string;
+            application: string;
+        };
+        themes: {
+            coffe: string;
+            light: string;
+            dark: string;
+            forest: string;
+        };
+        langs: {
+            english: string;
+            portuguese: string;
+            spanish: string;
+        };
     };
     messages: {
         "not-found": string;
@@ -88,17 +105,6 @@ declare const EnglishTranslation: {
             workGroups: string;
             breaks: string;
         };
-    };
-    themes: {
-        coffe: string;
-        light: string;
-        dark: string;
-        forest: string;
-    };
-    langs: {
-        english: string;
-        portuguese: string;
-        spanish: string;
     };
 };
 type TTranslation = typeof EnglishTranslation;

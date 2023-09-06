@@ -1,6 +1,7 @@
 const EnglishTranslation = {
   common: {
     ok: "Okay",
+    "not-found": "Not Found",
     error: "Error",
     cancel: "Cancel",
     back: "Back",
@@ -16,8 +17,9 @@ const EnglishTranslation = {
     logout: "Log Out",
     new: "New",
     workgroups: "Work Groups",
-    scalesgroups: "Scales Groups",
+    scalesgroups: "Scales Group",
     scales: "Scales",
+    remove: "Remove",
     company: "Company",
     companies: "Companies",
     database: "Databases",
@@ -39,7 +41,7 @@ const EnglishTranslation = {
     add: "Add {{complement}}",
     select: "Select {{complement}}",
     remove: "Remove {{complement}}",
-    name: "{{complement}}'s name",
+    name: "{{complement}}`s name",
     new: "New {{complement}}",
     edit: "Edit {{complement}}",
     open: "Open {{complement}}",
@@ -47,9 +49,24 @@ const EnglishTranslation = {
   },
   settings: {
     "application-title": "Select a company and database",
+    tabs: {
+      personal: "Pessoal",
+      application: "Aplicação",
+    },
+    themes: {
+      coffe: "Coffee",
+      light: "Light",
+      dark: "Dark",
+      forest: "Forest",
+    },
+    langs: {
+      english: "English",
+      portuguese: "Portuguese",
+      spanish: "Spanish",
+    },
   },
   messages: {
-    "not-found": "{{item}} was not found",
+    "not-found": "No {{item}} was found",
     typing: "Type your {{item}}...",
   },
   table: {
@@ -88,17 +105,6 @@ const EnglishTranslation = {
       workGroups: "Work Groups",
       breaks: "Breaks",
     },
-  },
-  themes: {
-    coffe: "Coffee",
-    light: "Light",
-    dark: "Dark",
-    forest: "Forest",
-  },
-  langs: {
-    english: "English",
-    portuguese: "Portuguese",
-    spanish: "Spanish",
   },
 };
 

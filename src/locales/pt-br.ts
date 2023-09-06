@@ -5,6 +5,7 @@ const PortugueseTranslation: TTranslation = {
     ok: "OK",
     error: "Erro",
     cancel: "Cancelar",
+    "not-found": "Não encontrado",
     back: "Voltar",
     name: "Nome",
     group: "Grupo",
@@ -16,7 +17,8 @@ const PortugueseTranslation: TTranslation = {
     logout: "Sair",
     new: "Novo",
     workgroups: "Grupos de Trabalho",
-    scalesgroups: "Grupos de Escalas",
+    scalesgroups: "Grupo de Escalas",
+    remove: "Remover",
     scales: "Escalas",
     company: "Empresa",
     companies: "Empresas",
@@ -49,6 +51,21 @@ const PortugueseTranslation: TTranslation = {
   },
   settings: {
     "application-title": "Selecione uma empresa e banco de dados",
+    tabs: {
+      application: "Aplicação",
+      personal: "Pessoal",
+    },
+    themes: {
+      coffe: "Café",
+      light: "Claro",
+      dark: "Escuro",
+      forest: "Floresta",
+    },
+    langs: {
+      english: "Inglês",
+      portuguese: "Português",
+      spanish: "Espanhol",
+    },
   },
   table: {
     page: "Página",
@@ -71,7 +88,7 @@ const PortugueseTranslation: TTranslation = {
   },
   messages: {
     "not-found": "Nenhum(a) {{item}} foi encontrado(a)",
-    typing: "Digite o(a) {{item}}..."
+    typing: "Digite o(a) {{item}}...",
   },
   data: {
     workgroups: {
@@ -88,19 +105,8 @@ const PortugueseTranslation: TTranslation = {
       name: "Nome",
       timeScale: "Escala de Tempo",
       workGroups: "Grupos de Trabalho",
-      breaks: "Pausas"
+      breaks: "Pausas",
     },
-  },
-  themes: {
-    coffe: "Café",
-    light: "Claro",
-    dark: "Escuro",
-    forest: "Floresta",
-  },
-  langs: {
-    english: "Inglês",
-    portuguese: "Português",
-    spanish: "Espanhol",
   },
 };
 
