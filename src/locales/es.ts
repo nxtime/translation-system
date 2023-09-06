@@ -6,10 +6,14 @@ const SpanishTranslation: TTranslation = {
     error: "Error",
     cancel: "Cancelar",
     back: "Volver",
+    name: "Nombre",
+    group: "Grupo",
     continue: "Continuar",
     close: "Cerrar",
     save: "Guardar",
     open: "Abrir",
+    break: "Pausa",
+    breaks: "Pausas",
     edit: "Editar",
     logout: "Cerrar sesión",
     new: "Nuevo",
@@ -25,17 +29,23 @@ const SpanishTranslation: TTranslation = {
     done: "Hecho",
     next: "Siguiente",
     previous: "Anterior",
+    entry: "Entrada",
     loading: "Cargando",
-    action: "Acción"
+    action: "Acción",
+    start: "Início",
+    journey: "Jornada",
+    end: "Saída",
+    finish: "Fim",
   },
   complement: {
     add: "Agregar {{complement}}",
     select: "Seleccionar {{complement}}",
     remove: "Eliminar {{complement}}",
+    name: "Nombre del {{complement}}",
     new: "Nuevo {{complement}}",
     edit: "Editar {{complement}}",
     open: "Abrir {{complement}}",
-    close: "Cerrar {{complement}}"
+    close: "Cerrar {{complement}}",
   },
   settings: {
     "application-title": "Seleccione una empresa y una base de datos",
@@ -59,6 +69,10 @@ const SpanishTranslation: TTranslation = {
       },
     },
   },
+  messages: {
+    "not-found": "Nenhum(a) {{item}} foi encontrado(a)",
+    typing: "Digite o(a) {{item}}..."
+  },
   data: {
     workgroups: {
       name: "Nombre",
@@ -74,6 +88,7 @@ const SpanishTranslation: TTranslation = {
       name: "Nombre",
       timeScale: "Escala de Tiempo",
       workGroups: "Grupos de Trabajo",
+      breaks: "Intervalos"
     },
   },
   themes: {
@@ -87,6 +102,6 @@ const SpanishTranslation: TTranslation = {
     portuguese: "Portugués",
     spanish: "Español",
   },
-}
+};
 
 export default SpanishTranslation;

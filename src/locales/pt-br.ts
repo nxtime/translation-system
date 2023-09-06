@@ -6,6 +6,8 @@ const PortugueseTranslation: TTranslation = {
     error: "Erro",
     cancel: "Cancelar",
     back: "Voltar",
+    name: "Nome",
+    group: "Grupo",
     continue: "Continuar",
     close: "Fechar",
     save: "Salvar",
@@ -20,6 +22,8 @@ const PortugueseTranslation: TTranslation = {
     companies: "Empresas",
     database: "Bancos de Dados",
     theme: "Tema",
+    break: "Pausa",
+    breaks: "Pausas",
     language: "Idioma",
     search: "Buscar",
     done: "Concluído",
@@ -27,12 +31,18 @@ const PortugueseTranslation: TTranslation = {
     previous: "Anterior",
     loading: "Carregando",
     action: "Ação",
+    entry: "Entrada",
+    journey: "Jornada",
+    start: "Início",
+    end: "Saída",
+    finish: "Fim",
   },
   complement: {
     add: "Adicionar {{complement}}",
     select: "Selecionar {{complement}}",
     remove: "Remover {{complement}}",
     new: "Novo {{complement}}",
+    name: "Nome do {{complement}}",
     edit: "Editar {{complement}}",
     open: "Abrir {{complement}}",
     close: "Fechar {{complement}}",
@@ -59,6 +69,10 @@ const PortugueseTranslation: TTranslation = {
       },
     },
   },
+  messages: {
+    "not-found": "Nenhum(a) {{item}} foi encontrado(a)",
+    typing: "Digite o(a) {{item}}..."
+  },
   data: {
     workgroups: {
       name: "Nome",
@@ -74,6 +88,7 @@ const PortugueseTranslation: TTranslation = {
       name: "Nome",
       timeScale: "Escala de Tempo",
       workGroups: "Grupos de Trabalho",
+      breaks: "Pausas"
     },
   },
   themes: {

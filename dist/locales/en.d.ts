@@ -4,10 +4,14 @@ declare const EnglishTranslation: {
         error: string;
         cancel: string;
         back: string;
+        name: string;
+        group: string;
         continue: string;
         close: string;
         save: string;
         open: string;
+        break: string;
+        breaks: string;
         edit: string;
         logout: string;
         new: string;
@@ -24,12 +28,18 @@ declare const EnglishTranslation: {
         next: string;
         previous: string;
         loading: string;
+        journey: string;
         action: string;
+        start: string;
+        entry: string;
+        end: string;
+        finish: string;
     };
     complement: {
         add: string;
         select: string;
         remove: string;
+        name: string;
         new: string;
         edit: string;
         open: string;
@@ -37,6 +47,10 @@ declare const EnglishTranslation: {
     };
     settings: {
         "application-title": string;
+    };
+    messages: {
+        "not-found": string;
+        typing: string;
     };
     table: {
         page: string;
@@ -72,6 +86,7 @@ declare const EnglishTranslation: {
             name: string;
             timeScale: string;
             workGroups: string;
+            breaks: string;
         };
     };
     themes: {
