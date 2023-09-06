@@ -30,7 +30,8 @@
   "dependencies": {
     "@vitejs/plugin-react": "^4.0.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "translation-system": "link:"
   },
   "devDependencies": {
     "@types/node": "^20.5.9",

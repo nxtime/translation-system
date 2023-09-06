@@ -20,39 +20,73 @@ const SpanishTranslation: TTranslation = {
     companies: "Empresas",
     database: "Bases de Datos",
     theme: "Tema",
-    language: "Idioma"
+    language: "Idioma",
+    search: "Buscar",
+    done: "Hecho",
+    next: "Siguiente",
+    previous: "Anterior",
+    loading: "Cargando",
+    action: "Acción"
+  },
+  complement: {
+    add: "Agregar {{complement}}",
+    select: "Seleccionar {{complement}}",
+    remove: "Eliminar {{complement}}",
+    new: "Nuevo {{complement}}",
+    edit: "Editar {{complement}}",
+    open: "Abrir {{complement}}",
+    close: "Cerrar {{complement}}"
   },
   settings: {
-    "application-title": "Selecciona una empresa y una base de datos"
+    "application-title": "Seleccione una empresa y una base de datos",
   },
   table: {
+    page: "Página",
+    of: "de",
+    "per-page": "Por página",
+    items: "Elementos",
+  },
+  picker: {
+    date: {
+      days: {
+        su: "Do",
+        mo: "Lu",
+        tu: "Ma",
+        we: "Mi",
+        th: "Ju",
+        fr: "Vi",
+        sa: "Sá",
+      },
+    },
+  },
+  data: {
     workgroups: {
       name: "Nombre",
       agents: "Agentes",
-      supervisor: "Supervisor"
+      supervisor: "Supervisor",
     },
     scales: {
       firstName: "Nombre",
       lastName: "Apellido",
-      baseUserId: "ID de Usuario Base"
+      baseUserId: "ID de Usuario Base",
     },
     scalesgroups: {
       name: "Nombre",
       timeScale: "Escala de Tiempo",
-      workGroups: "Grupos de Trabajo"
-    }
+      workGroups: "Grupos de Trabajo",
+    },
   },
   themes: {
     coffe: "Café",
     light: "Claro",
     dark: "Oscuro",
-    forest: "Bosque"
+    forest: "Bosque",
   },
   langs: {
     english: "Inglés",
     portuguese: "Portugués",
-    spanish: "Español"
-  }
+    spanish: "Español",
+  },
 }
 
 export default SpanishTranslation;

@@ -14,7 +14,7 @@ type RecursiveKeyOf<TObj extends object> = {
 type RecursiveKeyOfInner<TObj extends object> = {
   [TKey in keyof TObj & (string | number)]: RecursiveKeyOfHandleValue<
     TObj[TKey],
-    `['${TKey}']` | `.${TKey}`
+    `.${TKey}`
   >;
 }[keyof TObj & (string | number)];
 

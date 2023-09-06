@@ -21,11 +21,45 @@ const PortugueseTranslation: TTranslation = {
     database: "Bancos de Dados",
     theme: "Tema",
     language: "Idioma",
+    search: "Buscar",
+    done: "Concluído",
+    next: "Próximo",
+    previous: "Anterior",
+    loading: "Carregando",
+    action: "Ação",
+  },
+  complement: {
+    add: "Adicionar {{complement}}",
+    select: "Selecionar {{complement}}",
+    remove: "Remover {{complement}}",
+    new: "Novo {{complement}}",
+    edit: "Editar {{complement}}",
+    open: "Abrir {{complement}}",
+    close: "Fechar {{complement}}",
   },
   settings: {
     "application-title": "Selecione uma empresa e banco de dados",
   },
   table: {
+    page: "Página",
+    of: "de",
+    "per-page": "Por página",
+    items: "Itens",
+  },
+  picker: {
+    date: {
+      days: {
+        su: "Dom",
+        mo: "Seg",
+        tu: "Ter",
+        we: "Qua",
+        th: "Qui",
+        fr: "Sex",
+        sa: "Sáb",
+      },
+    },
+  },
+  data: {
     workgroups: {
       name: "Nome",
       agents: "Agentes",

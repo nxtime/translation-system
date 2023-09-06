@@ -19,11 +19,45 @@ declare const EnglishTranslation: {
         database: string;
         theme: string;
         language: string;
+        search: string;
+        done: string;
+        next: string;
+        previous: string;
+        loading: string;
+        action: string;
+    };
+    complement: {
+        add: string;
+        select: string;
+        remove: string;
+        new: string;
+        edit: string;
+        open: string;
+        close: string;
     };
     settings: {
         "application-title": string;
     };
     table: {
+        page: string;
+        of: string;
+        "per-page": string;
+        items: string;
+    };
+    picker: {
+        date: {
+            days: {
+                su: string;
+                mo: string;
+                tu: string;
+                we: string;
+                th: string;
+                fr: string;
+                sa: string;
+            };
+        };
+    };
+    data: {
         workgroups: {
             name: string;
             agents: string;
