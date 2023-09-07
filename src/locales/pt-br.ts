@@ -4,6 +4,7 @@ const PortugueseTranslation: TTranslation = {
   common: {
     ok: "OK",
     error: "Erro",
+    add: "Adicionar",
     cancel: "Cancelar",
     "not-found": "Não encontrado",
     back: "Voltar",
@@ -106,6 +107,13 @@ const PortugueseTranslation: TTranslation = {
       timeScale: "Escala de Tempo",
       workGroups: "Grupos de Trabalho",
       breaks: "Pausas",
+    },
+    services: {
+      attempts: "Tentativas",
+      hour: "Hora",
+      answereds: "Respostas",
+      contact_right_person: "Contato com a pessoa certa",
+      loggeds_agents: "Agentes logados",
     },
   },
 };

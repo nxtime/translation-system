@@ -3,6 +3,7 @@ import { TTranslation } from "./en";
 const SpanishTranslation: TTranslation = {
   common: {
     ok: "Aceptar",
+    add: "Adicionar",
     error: "Error",
     "not-found": "Não encontrado",
     cancel: "Cancelar",
@@ -106,6 +107,13 @@ const SpanishTranslation: TTranslation = {
       timeScale: "Escala de Tiempo",
       workGroups: "Grupos de Trabajo",
       breaks: "Intervalos",
+    },
+    services: {
+      attempts: "Intentos",
+      hour: "Hora",
+      answereds: "Respostas",
+      contact_right_person: "Contato con la persona cierta",
+      loggeds_agents: "Agentes Logados",
     },
   },
 };

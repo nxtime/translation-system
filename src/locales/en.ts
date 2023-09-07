@@ -2,6 +2,7 @@ const EnglishTranslation = {
   common: {
     ok: "Okay",
     "not-found": "Not Found",
+    add: "Add",
     error: "Error",
     cancel: "Cancel",
     back: "Back",
@@ -50,8 +51,8 @@ const EnglishTranslation = {
   settings: {
     "application-title": "Select a company and database",
     tabs: {
-      personal: "Pessoal",
-      application: "Aplicação",
+      personal: "Personal",
+      application: "Application",
     },
     themes: {
       coffe: "Coffee",
@@ -104,6 +105,13 @@ const EnglishTranslation = {
       timeScale: "Time Scale",
       workGroups: "Work Groups",
       breaks: "Breaks",
+    },
+    services: {
+      attempts: "Attempts",
+      hour: "Hour",
+      answereds: "Answereds",
+      contact_right_person: "Contact Right Person",
+      loggeds_agents: "Loggeds Agents",
     },
   },
 };

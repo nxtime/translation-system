@@ -2,6 +2,7 @@ declare const EnglishTranslation: {
     common: {
         ok: string;
         "not-found": string;
+        add: string;
         error: string;
         cancel: string;
         back: string;
@@ -104,6 +105,13 @@ declare const EnglishTranslation: {
             timeScale: string;
             workGroups: string;
             breaks: string;
+        };
+        services: {
+            attempts: string;
+            hour: string;
+            answereds: string;
+            contact_right_person: string;
+            loggeds_agents: string;
         };
     };
 };
