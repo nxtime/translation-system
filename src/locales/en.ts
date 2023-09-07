@@ -8,6 +8,10 @@ const EnglishTranslation = {
     back: "Back",
     name: "Name",
     group: "Group",
+    services: "Services",
+    visualization: "Visualization",
+    table: "Table",
+    chart: "Chart",
     continue: "Continue",
     close: "Close",
     save: "Save",
@@ -89,10 +93,15 @@ const EnglishTranslation = {
       },
     },
   },
+  select: {
+    "select-one": "Select one of the options"
+  },
   data: {
     workgroups: {
       name: "Name",
       agents: "Agents",
+      workGroups: "Work Groups",
+      timeScale: "Time Scale",
       supervisor: "Supervisor",
     },
     scales: {
@@ -112,6 +121,7 @@ const EnglishTranslation = {
       answereds: "Answereds",
       contact_right_person: "Contact Right Person",
       loggeds_agents: "Loggeds Agents",
+      average_service_time: "Average Service Time",
     },
   },
 };

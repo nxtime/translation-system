@@ -11,6 +11,10 @@ const SpanishTranslation: TTranslation = {
     name: "Nombre",
     group: "Grupo",
     continue: "Continuar",
+    services: "Serviços",
+    visualization: "Visualização",
+    table: "Tabla",
+    chart: "Gráfico",
     close: "Cerrar",
     save: "Guardar",
     open: "Abrir",
@@ -91,10 +95,15 @@ const SpanishTranslation: TTranslation = {
     "not-found": "Nenhum(a) {{item}} foi encontrado(a)",
     typing: "Digite o(a) {{item}}...",
   },
+  select: {
+    "select-one": "Selecione uma das opções"
+  },
   data: {
     workgroups: {
       name: "Nombre",
       agents: "Agentes",
+      workGroups: "Grupos de Trabalho",
+      timeScale: "Tempo de Escala",
       supervisor: "Supervisor",
     },
     scales: {
@@ -114,6 +123,7 @@ const SpanishTranslation: TTranslation = {
       answereds: "Respostas",
       contact_right_person: "Contato con la persona cierta",
       loggeds_agents: "Agentes Logados",
+      average_service_time: "Tempo médio de serviço"
     },
   },
 };

@@ -8,6 +8,10 @@ declare const EnglishTranslation: {
         back: string;
         name: string;
         group: string;
+        services: string;
+        visualization: string;
+        table: string;
+        chart: string;
         continue: string;
         close: string;
         save: string;
@@ -89,10 +93,15 @@ declare const EnglishTranslation: {
             };
         };
     };
+    select: {
+        "select-one": string;
+    };
     data: {
         workgroups: {
             name: string;
             agents: string;
+            workGroups: string;
+            timeScale: string;
             supervisor: string;
         };
         scales: {
@@ -112,6 +121,7 @@ declare const EnglishTranslation: {
             answereds: string;
             contact_right_person: string;
             loggeds_agents: string;
+            average_service_time: string;
         };
     };
 };

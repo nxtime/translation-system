@@ -10,6 +10,10 @@ const PortugueseTranslation: TTranslation = {
     back: "Voltar",
     name: "Nome",
     group: "Grupo",
+    services: "Serviços",
+    visualization: "Visualização",
+    table: "Tabela",
+    chart: "Gráfico",
     continue: "Continuar",
     close: "Fechar",
     save: "Salvar",
@@ -87,6 +91,9 @@ const PortugueseTranslation: TTranslation = {
       },
     },
   },
+  select: {
+    "select-one": "Selecione uma das opções"
+  },
   messages: {
     "not-found": "Nenhum(a) {{item}} foi encontrado(a)",
     typing: "Digite o(a) {{item}}...",
@@ -95,10 +102,12 @@ const PortugueseTranslation: TTranslation = {
     workgroups: {
       name: "Nome",
       agents: "Agentes",
+      workGroups: "Grupos de Trabalho",
+      timeScale: "Tempo de Escala",
       supervisor: "Supervisor",
     },
     scales: {
-      firstName: "Primeiro Nome",
+      firstName: "Nome",
       lastName: "Sobrenome",
       baseUserId: "ID de Usuário Base",
     },
@@ -114,6 +123,7 @@ const PortugueseTranslation: TTranslation = {
       answereds: "Respostas",
       contact_right_person: "Contato com a pessoa certa",
       loggeds_agents: "Agentes logados",
+      average_service_time: "Tempo médio de serviço",
     },
   },
 };
