@@ -4,7 +4,12 @@ const SpanishTranslation: TTranslation = {
   common: {
     ok: "Aceptar",
     add: "Adicionar",
+    home: "Menu inicial",
     error: "Error",
+    users: "Usuarios",
+    agents: "Agentes",
+    general: "Geral",
+    applications: "Applicaciones",
     "not-found": "Não encontrado",
     cancel: "Cancelar",
     back: "Volver",

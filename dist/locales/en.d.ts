@@ -2,6 +2,7 @@ declare const EnglishTranslation: {
     common: {
         ok: string;
         "not-found": string;
+        home: string;
         add: string;
         error: string;
         cancel: string;
@@ -21,6 +22,10 @@ declare const EnglishTranslation: {
         edit: string;
         logout: string;
         new: string;
+        agents: string;
+        users: string;
+        applications: string;
+        general: string;
         workgroups: string;
         scalesgroups: string;
         scales: string;

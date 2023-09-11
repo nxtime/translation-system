@@ -2,6 +2,7 @@ const EnglishTranslation = {
   common: {
     ok: "Okay",
     "not-found": "Not Found",
+    home: "Home",
     add: "Add",
     error: "Error",
     cancel: "Cancel",
@@ -21,6 +22,10 @@ const EnglishTranslation = {
     edit: "Edit",
     logout: "Log Out",
     new: "New",
+    agents: "Agents",
+    users: "Users",
+    applications: "Applications",
+    general: "General",
     workgroups: "Work Groups",
     scalesgroups: "Scales Group",
     scales: "Scales",

@@ -84,7 +84,7 @@ class H {
     });
   }
 }
-function T() {
+function A() {
   let i, e;
   const t = new Promise((s, n) => {
     i = s, e = n;
@@ -99,7 +99,7 @@ function ue(i, e, t) {
     e[s] && (t[s] = e[s]);
   });
 }
-function G(i, e, t) {
+function z(i, e, t) {
   function s(a) {
     return a && a.indexOf("###") > -1 ? a.replace(/###/g, ".") : a;
   }
@@ -122,27 +122,27 @@ function Z(i, e, t) {
   const {
     obj: s,
     k: n
-  } = G(i, e, Object);
+  } = z(i, e, Object);
   s[n] = t;
 }
 function fe(i, e, t, s) {
   const {
     obj: n,
     k: r
-  } = G(i, e, Object);
+  } = z(i, e, Object);
   n[r] = n[r] || [], s && (n[r] = n[r].concat(t)), s || n[r].push(t);
 }
-function K(i, e) {
+function U(i, e) {
   const {
     obj: t,
     k: s
-  } = G(i, e);
+  } = z(i, e);
   if (t)
     return t[s];
 }
 function ce(i, e, t) {
-  const s = K(i, t);
-  return s !== void 0 ? s : K(e, t);
+  const s = U(i, t);
+  return s !== void 0 ? s : U(e, t);
 }
 function ie(i, e, t) {
   for (const s in e)
@@ -177,7 +177,7 @@ function de(i, e, t) {
   }
   return r;
 }
-function U(i, e) {
+function K(i, e) {
   let t = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : ".";
   if (!i)
     return;
@@ -203,13 +203,13 @@ function U(i, e) {
           return o[l];
       }
       const f = s.slice(r + a).join(t);
-      return f ? U(o, f, t) : void 0;
+      return f ? K(o, f, t) : void 0;
     }
     n = n[s[r]];
   }
   return n;
 }
-function B(i) {
+function M(i) {
   return i && i.indexOf("_") > 0 ? i.replace("_", "-") : i;
 }
 class q extends H {
@@ -232,8 +232,8 @@ class q extends H {
     const r = n.keySeparator !== void 0 ? n.keySeparator : this.options.keySeparator, a = n.ignoreJSONStructure !== void 0 ? n.ignoreJSONStructure : this.options.ignoreJSONStructure;
     let l = [e, t];
     s && typeof s != "string" && (l = l.concat(s)), s && typeof s == "string" && (l = l.concat(r ? s.split(r) : s)), e.indexOf(".") > -1 && (l = e.split("."));
-    const o = K(this.data, l);
-    return o || !a || typeof s != "string" ? o : U(this.data && this.data[e] && this.data[e][t], s, r);
+    const o = U(this.data, l);
+    return o || !a || typeof s != "string" ? o : K(this.data && this.data[e] && this.data[e][t], s, r);
   }
   addResource(e, t, s, n) {
     let r = arguments.length > 4 && arguments[4] !== void 0 ? arguments[4] : {
@@ -258,7 +258,7 @@ class q extends H {
       silent: !1
     }, l = [e, t];
     e.indexOf(".") > -1 && (l = e.split("."), n = s, s = t, t = l[1]), this.addNamespaces(t);
-    let o = K(this.data, l) || {};
+    let o = U(this.data, l) || {};
     n ? ie(o, s, r) : o = {
       ...o,
       ...s
@@ -298,7 +298,7 @@ var re = {
   }
 };
 const X = {};
-class M extends H {
+class B extends H {
   constructor(e) {
     let t = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
     super(), ue(["resourceStore", "languageUtils", "pluralResolver", "interpolator", "backendConnector", "i18nFormat", "utils"], e, this), this.options = t, this.options.keySeparator === void 0 && (this.options.keySeparator = "."), this.logger = O.create("translator");
@@ -394,7 +394,7 @@ class M extends H {
       u = u.join(v), u && (u = this.extendTranslation(u, e, t, s));
     else {
       let b = !1, L = !1;
-      const N = t.count !== void 0 && typeof t.count != "string", x = M.hasDefaultValue(t), j = N ? this.pluralResolver.getSuffix(f, t.count, t) : "", ae = t.ordinal && N ? this.pluralResolver.getSuffix(f, t.count, {
+      const N = t.count !== void 0 && typeof t.count != "string", x = B.hasDefaultValue(t), j = N ? this.pluralResolver.getSuffix(f, t.count, t) : "", ae = t.ordinal && N ? this.pluralResolver.getSuffix(f, t.count, {
         ordinal: !1
       }) : "", P = t[`defaultValue${j}`] || t[`defaultValue${ae}`] || t.defaultValue;
       !this.isValidLookup(u) && x && (b = !0, u = P), this.isValidLookup(u) || (L = !0, u = a);
@@ -526,7 +526,7 @@ class M extends H {
     return !1;
   }
 }
-function z(i) {
+function G(i) {
   return i.charAt(0).toUpperCase() + i.slice(1);
 }
 class _ {
@@ -534,13 +534,13 @@ class _ {
     this.options = e, this.supportedLngs = this.options.supportedLngs || !1, this.logger = O.create("languageUtils");
   }
   getScriptPartFromCode(e) {
-    if (e = B(e), !e || e.indexOf("-") < 0)
+    if (e = M(e), !e || e.indexOf("-") < 0)
       return null;
     const t = e.split("-");
     return t.length === 2 || (t.pop(), t[t.length - 1].toLowerCase() === "x") ? null : this.formatLanguageCode(t.join("-"));
   }
   getLanguagePartFromCode(e) {
-    if (e = B(e), !e || e.indexOf("-") < 0)
+    if (e = M(e), !e || e.indexOf("-") < 0)
       return e;
     const t = e.split("-");
     return this.formatLanguageCode(t[0]);
@@ -549,7 +549,7 @@ class _ {
     if (typeof e == "string" && e.indexOf("-") > -1) {
       const t = ["hans", "hant", "latn", "cyrl", "cans", "mong", "arab"];
       let s = e.split("-");
-      return this.options.lowerCaseLng ? s = s.map((n) => n.toLowerCase()) : s.length === 2 ? (s[0] = s[0].toLowerCase(), s[1] = s[1].toUpperCase(), t.indexOf(s[1].toLowerCase()) > -1 && (s[1] = z(s[1].toLowerCase()))) : s.length === 3 && (s[0] = s[0].toLowerCase(), s[1].length === 2 && (s[1] = s[1].toUpperCase()), s[0] !== "sgn" && s[2].length === 2 && (s[2] = s[2].toUpperCase()), t.indexOf(s[1].toLowerCase()) > -1 && (s[1] = z(s[1].toLowerCase())), t.indexOf(s[2].toLowerCase()) > -1 && (s[2] = z(s[2].toLowerCase()))), s.join("-");
+      return this.options.lowerCaseLng ? s = s.map((n) => n.toLowerCase()) : s.length === 2 ? (s[0] = s[0].toLowerCase(), s[1] = s[1].toUpperCase(), t.indexOf(s[1].toLowerCase()) > -1 && (s[1] = G(s[1].toLowerCase()))) : s.length === 3 && (s[0] = s[0].toLowerCase(), s[1].length === 2 && (s[1] = s[1].toUpperCase()), s[0] !== "sgn" && s[2].length === 2 && (s[2] = s[2].toUpperCase()), t.indexOf(s[1].toLowerCase()) > -1 && (s[1] = G(s[1].toLowerCase())), t.indexOf(s[2].toLowerCase()) > -1 && (s[2] = G(s[2].toLowerCase()))), s.join("-");
     }
     return this.options.cleanCode || this.options.lowerCaseLng ? e.toLowerCase() : e;
   }
@@ -789,7 +789,7 @@ class ve {
     let t = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
     if (this.shouldUseIntlApi())
       try {
-        return new Intl.PluralRules(B(e), {
+        return new Intl.PluralRules(M(e), {
           type: t.ordinal ? "ordinal" : "cardinal"
         });
       } catch {
@@ -829,7 +829,7 @@ class ve {
 }
 function te(i, e, t) {
   let s = arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : ".", n = arguments.length > 4 && arguments[4] !== void 0 ? arguments[4] : !0, r = ce(i, e, t);
-  return !r && n && typeof t == "string" && (r = U(i, t, s), r === void 0 && (r = U(e, t, s))), r;
+  return !r && n && typeof t == "string" && (r = K(i, t, s), r === void 0 && (r = K(e, t, s))), r;
 }
 class Le {
   constructor() {
@@ -972,7 +972,7 @@ function R(i) {
   return function(s, n, r) {
     const a = n + JSON.stringify(r);
     let l = e[a];
-    return l || (l = i(B(n), r), e[a] = l), l(s);
+    return l || (l = i(M(n), r), e[a] = l), l(s);
   };
 }
 class Ne {
@@ -1256,7 +1256,7 @@ function ke(i) {
     typeof i[t] == "function" && (i[t] = i[t].bind(i));
   });
 }
-class A extends H {
+class T extends H {
   constructor() {
     let e = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {}, t = arguments.length > 1 ? arguments[1] : void 0;
     if (super(), this.options = ne(e), this.services = {}, this.logger = O, this.modules = {
@@ -1302,7 +1302,7 @@ class A extends H {
         for (var p = arguments.length, d = new Array(p > 1 ? p - 1 : 0), m = 1; m < p; m++)
           d[m - 1] = arguments[m];
         e.emit(h, ...d);
-      }), this.modules.languageDetector && (u.languageDetector = r(this.modules.languageDetector), u.languageDetector.init && u.languageDetector.init(u, this.options.detection, this.options)), this.modules.i18nFormat && (u.i18nFormat = r(this.modules.i18nFormat), u.i18nFormat.init && u.i18nFormat.init(this)), this.translator = new M(this.services, this.options), this.translator.on("*", function(h) {
+      }), this.modules.languageDetector && (u.languageDetector = r(this.modules.languageDetector), u.languageDetector.init && u.languageDetector.init(u, this.options.detection, this.options)), this.modules.i18nFormat && (u.i18nFormat = r(this.modules.i18nFormat), u.i18nFormat.init && u.i18nFormat.init(this)), this.translator = new B(this.services, this.options), this.translator.on("*", function(h) {
         for (var p = arguments.length, d = new Array(p > 1 ? p - 1 : 0), m = 1; m < p; m++)
           d[m - 1] = arguments[m];
         e.emit(h, ...d);
@@ -1323,7 +1323,7 @@ class A extends H {
         return e.store[c](...arguments), e;
       };
     });
-    const o = T(), f = () => {
+    const o = A(), f = () => {
       const c = (g, u) => {
         this.isInitialized && !this.initializedStoreOnce && this.logger.warn("init: i18next is already initialized. You should call init just once!"), this.isInitialized = !0, this.options.isClone || this.logger.log("initialized", this.options), this.emit("initialized", this.options), o.resolve(u), s(g, u);
       };
@@ -1353,7 +1353,7 @@ class A extends H {
       s(null);
   }
   reloadResources(e, t, s) {
-    const n = T();
+    const n = A();
     return e || (e = this.languages), t || (t = this.options.ns), s || (s = D), this.services.backendConnector.reload(e, t, (r) => {
       n.resolve(), s(r);
     }), n;
@@ -1378,7 +1378,7 @@ class A extends H {
   changeLanguage(e, t) {
     var s = this;
     this.isLanguageChangingTo = e;
-    const n = T();
+    const n = A();
     this.emit("languageChanging", e);
     const r = (o) => {
       this.language = o, this.languages = this.services.languageUtils.toResolveHierarchy(o), this.resolvedLanguage = void 0, this.setResolvedLanguage(o);
@@ -1446,7 +1446,7 @@ class A extends H {
     return !!(this.hasResourceBundle(s, e) || !this.services.backendConnector.backend || this.options.resources && !this.options.partialBundledLanguages || a(s, e) && (!n || a(r, e)));
   }
   loadNamespaces(e, t) {
-    const s = T();
+    const s = A();
     return this.options.ns ? (typeof e == "string" && (e = [e]), e.forEach((n) => {
       this.options.ns.indexOf(n) < 0 && this.options.ns.push(n);
     }), this.loadResources((n) => {
@@ -1454,7 +1454,7 @@ class A extends H {
     }), s) : (t && t(), Promise.resolve());
   }
   loadLanguages(e, t) {
-    const s = T();
+    const s = A();
     typeof e == "string" && (e = [e]);
     const n = this.options.preload || [], r = e.filter((a) => n.indexOf(a) < 0);
     return r.length ? (this.options.preload = n.concat(r), this.loadResources((a) => {
@@ -1469,7 +1469,7 @@ class A extends H {
   }
   static createInstance() {
     let e = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {}, t = arguments.length > 1 ? arguments[1] : void 0;
-    return new A(e, t);
+    return new T(e, t);
   }
   cloneInstance() {
     let e = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {}, t = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : D;
@@ -1479,14 +1479,14 @@ class A extends H {
       ...this.options,
       ...e,
       isClone: !0
-    }, r = new A(n);
+    }, r = new T(n);
     return (e.debug !== void 0 || e.prefix !== void 0) && (r.logger = r.logger.clone(e)), ["store", "services", "language"].forEach((l) => {
       r[l] = this[l];
     }), r.services = {
       ...this.services
     }, r.services.utils = {
       hasLoadedNamespace: r.hasLoadedNamespace.bind(r)
-    }, s && (r.store = new q(this.store.data, n), r.services.resourceStore = r.store), r.translator = new M(r.services, n), r.translator.on("*", function(l) {
+    }, s && (r.store = new q(this.store.data, n), r.services.resourceStore = r.store), r.translator = new B(r.services, n), r.translator.on("*", function(l) {
       for (var o = arguments.length, f = new Array(o > 1 ? o - 1 : 0), c = 1; c < o; c++)
         f[c - 1] = arguments[c];
       r.emit(l, ...f);
@@ -1504,8 +1504,8 @@ class A extends H {
     };
   }
 }
-const y = A.createInstance();
-y.createInstance = A.createInstance;
+const y = T.createInstance();
+y.createInstance = T.createInstance;
 y.createInstance;
 y.dir;
 y.init;
@@ -1520,10 +1520,11 @@ y.setDefaultNamespace;
 y.hasLoadedNamespace;
 y.loadNamespaces;
 y.loadLanguages;
-const Ae = (i, e) => y.t(i, e), Pe = {
+const Te = (i, e) => y.t(i, e), Pe = {
   common: {
     ok: "Okay",
     "not-found": "Not Found",
+    home: "Home",
     add: "Add",
     error: "Error",
     cancel: "Cancel",
@@ -1543,6 +1544,10 @@ const Ae = (i, e) => y.t(i, e), Pe = {
     edit: "Edit",
     logout: "Log Out",
     new: "New",
+    agents: "Agents",
+    users: "Users",
+    applications: "Applications",
+    general: "General",
     workgroups: "Work Groups",
     scalesgroups: "Scales Group",
     scales: "Scales",
@@ -1650,7 +1655,12 @@ const Ae = (i, e) => y.t(i, e), Pe = {
   common: {
     ok: "Aceptar",
     add: "Adicionar",
+    home: "Menu inicial",
     error: "Error",
+    users: "Usuarios",
+    agents: "Agentes",
+    general: "Geral",
+    applications: "Applicaciones",
     "not-found": "Não encontrado",
     cancel: "Cancelar",
     back: "Volver",
@@ -1776,9 +1786,14 @@ const Ae = (i, e) => y.t(i, e), Pe = {
   common: {
     ok: "OK",
     error: "Erro",
+    home: "Menu inicial",
     add: "Adicionar",
     cancel: "Cancelar",
     "not-found": "Não encontrado",
+    users: "Usuarios",
+    agents: "Agentes",
+    general: "Geral",
+    applications: "Aplicações",
     back: "Voltar",
     name: "Nome",
     group: "Grupo",
@@ -1914,5 +1929,5 @@ const Ae = (i, e) => y.t(i, e), Pe = {
 export {
   je as changeAppTranslationLanguage,
   Fe as initAppTranslation,
-  Ae as translate
+  Te as translate
 };
