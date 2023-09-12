@@ -8,12 +8,19 @@ const PortugueseTranslation: TTranslation = {
     add: "Adicionar",
     cancel: "Cancelar",
     "not-found": "Não encontrado",
+    user: "Usuário",
+    admin: "Administrador",
+    viewer: "Visualizador",
+    role: "Cargo",
+    roles: "Cargos",
     users: "Usuarios",
     agents: "Agentes",
     general: "Geral",
     applications: "Aplicações",
+    agent: "Agente",
     back: "Voltar",
     name: "Nome",
+    email: "Email",
     group: "Grupo",
     services: "Serviços",
     visualization: "Visualização",
@@ -104,6 +111,13 @@ const PortugueseTranslation: TTranslation = {
     typing: "Digite o(a) {{item}}...",
   },
   data: {
+    users: {
+      firstName: "Nome",
+      lastName: "Sobrenome",
+      email: "Email",
+      role: "Cargo",
+      active: "Ativo"
+    },
     workgroups: {
       name: "Nome",
       agents: "Agentes",

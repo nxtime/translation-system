@@ -8,7 +8,14 @@ const SpanishTranslation: TTranslation = {
     error: "Error",
     users: "Usuarios",
     agents: "Agentes",
+    user: "Usuário",
+    admin: "Administrador",
+    viewer: "Visualizador",
+    role: "Cargo",
+    roles: "Cargos",
+    agent: "Agente",
     general: "Geral",
+    email: "Email",
     applications: "Applicaciones",
     "not-found": "Não encontrado",
     cancel: "Cancelar",
@@ -104,6 +111,13 @@ const SpanishTranslation: TTranslation = {
     "select-one": "Selecione uma das opções"
   },
   data: {
+    users: {
+      firstName: "Nome",
+      lastName: "Sobrenome",
+      email: "Email",
+      role: "Cargo",
+      active: "Ativo"
+    },
     workgroups: {
       name: "Nombre",
       agents: "Agentes",

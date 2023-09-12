@@ -3,11 +3,17 @@ declare const EnglishTranslation: {
         ok: string;
         "not-found": string;
         home: string;
+        user: string;
+        admin: string;
+        viewer: string;
+        role: string;
+        roles: string;
         add: string;
         error: string;
         cancel: string;
         back: string;
         name: string;
+        email: string;
         group: string;
         services: string;
         visualization: string;
@@ -23,6 +29,7 @@ declare const EnglishTranslation: {
         logout: string;
         new: string;
         agents: string;
+        agent: string;
         users: string;
         applications: string;
         general: string;
@@ -102,6 +109,13 @@ declare const EnglishTranslation: {
         "select-one": string;
     };
     data: {
+        users: {
+            firstName: string;
+            lastName: string;
+            email: string;
+            role: string;
+            active: string;
+        };
         workgroups: {
             name: string;
             agents: string;

@@ -3,11 +3,17 @@ const EnglishTranslation = {
     ok: "Okay",
     "not-found": "Not Found",
     home: "Home",
+    user: "User",
+    admin: "Administrator",
+    viewer: "Viewer",
+    role: "Role",
+    roles: "Roles",
     add: "Add",
     error: "Error",
     cancel: "Cancel",
     back: "Back",
     name: "Name",
+    email :"Email",
     group: "Group",
     services: "Services",
     visualization: "Visualization",
@@ -23,6 +29,7 @@ const EnglishTranslation = {
     logout: "Log Out",
     new: "New",
     agents: "Agents",
+    agent: "Agent",
     users: "Users",
     applications: "Applications",
     general: "General",
@@ -102,6 +109,13 @@ const EnglishTranslation = {
     "select-one": "Select one of the options"
   },
   data: {
+    users: {
+      firstName: "First Name",
+      lastName: "Last Name",
+      email: "Email",
+      role: "Role",
+      active: "Active"
+    },
     workgroups: {
       name: "Name",
       agents: "Agents",
