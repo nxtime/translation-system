@@ -15,6 +15,7 @@ const SpanishTranslation: TTranslation = {
     roles: "Cargos",
     agent: "Agente",
     general: "Geral",
+    password: "Senha",
     email: "Email",
     applications: "Applicaciones",
     "not-found": "Não encontrado",
@@ -106,9 +107,19 @@ const SpanishTranslation: TTranslation = {
   messages: {
     "not-found": "Nenhum(a) {{item}} foi encontrado(a)",
     typing: "Digite o(a) {{item}}...",
+    success: "{{item}} {{action}} com sucesso",
+    failed: "{{item}} {{action}} com falha",
+  },
+  actions: {
+    create: "criar",
+    created: "criado",
+    update: "atualizar",
+    updated: "atualizado",
+    remove: "remover",
+    removed: "removido",
   },
   select: {
-    "select-one": "Selecione uma das opções"
+    "select-one": "Selecione uma das opções",
   },
   data: {
     users: {
@@ -116,7 +127,7 @@ const SpanishTranslation: TTranslation = {
       lastName: "Sobrenome",
       email: "Email",
       role: "Cargo",
-      active: "Ativo"
+      active: "Ativo",
     },
     workgroups: {
       name: "Nombre",
@@ -142,7 +153,7 @@ const SpanishTranslation: TTranslation = {
       answereds: "Respostas",
       contact_right_person: "Contato con la persona cierta",
       loggeds_agents: "Agentes Logados",
-      average_service_time: "Tempo médio de serviço"
+      average_service_time: "Tempo médio de serviço",
     },
   },
 };

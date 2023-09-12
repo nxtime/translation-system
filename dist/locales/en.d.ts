@@ -15,6 +15,7 @@ declare const EnglishTranslation: {
         name: string;
         email: string;
         group: string;
+        password: string;
         services: string;
         visualization: string;
         table: string;
@@ -85,6 +86,8 @@ declare const EnglishTranslation: {
     messages: {
         "not-found": string;
         typing: string;
+        success: string;
+        failed: string;
     };
     table: {
         page: string;
@@ -107,6 +110,14 @@ declare const EnglishTranslation: {
     };
     select: {
         "select-one": string;
+    };
+    actions: {
+        create: string;
+        created: string;
+        update: string;
+        updated: string;
+        remove: string;
+        removed: string;
     };
     data: {
         users: {

@@ -11,6 +11,7 @@ const PortugueseTranslation: TTranslation = {
     user: "Usuário",
     admin: "Administrador",
     viewer: "Visualizador",
+    password: "Senha",
     role: "Cargo",
     roles: "Cargos",
     users: "Usuarios",
@@ -109,6 +110,16 @@ const PortugueseTranslation: TTranslation = {
   messages: {
     "not-found": "Nenhum(a) {{item}} foi encontrado(a)",
     typing: "Digite o(a) {{item}}...",
+    success: "{{item}} {{action}} com sucesso",
+    failed: "{{item}} {{action}} com falha",
+  },
+  actions: {
+    create: "criar",
+    created: "criado",
+    update: "atualizar",
+    updated: "atualizado",
+    remove: "remover",
+    removed: "removido",
   },
   data: {
     users: {

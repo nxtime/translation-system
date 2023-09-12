@@ -13,8 +13,9 @@ const EnglishTranslation = {
     cancel: "Cancel",
     back: "Back",
     name: "Name",
-    email :"Email",
+    email: "Email",
     group: "Group",
+    password: "Password",
     services: "Services",
     visualization: "Visualization",
     table: "Table",
@@ -85,6 +86,8 @@ const EnglishTranslation = {
   messages: {
     "not-found": "No {{item}} was found",
     typing: "Type your {{item}}...",
+    success: "{{item}} {{action}} successfully",
+    failed: "{{item}} {{action}} failed",
   },
   table: {
     page: "Page",
@@ -106,7 +109,15 @@ const EnglishTranslation = {
     },
   },
   select: {
-    "select-one": "Select one of the options"
+    "select-one": "Select one of the options",
+  },
+  actions: {
+    create: "create",
+    created: "created",
+    update: "update",
+    updated: "updated",
+    remove: "remove",
+    removed: "removed",
   },
   data: {
     users: {
@@ -114,7 +125,7 @@ const EnglishTranslation = {
       lastName: "Last Name",
       email: "Email",
       role: "Role",
-      active: "Active"
+      active: "Active",
     },
     workgroups: {
       name: "Name",
