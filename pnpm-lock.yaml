@@ -20,9 +20,6 @@ dependencies:
   react-i18next:
     specifier: ^13.2.2
     version: 13.2.2(i18next@23.4.9)(react-dom@18.2.0)(react@18.2.0)
-  translation-system:
-    specifier: 'link:'
-    version: 'link:'
 
 devDependencies:
   '@types/node':
