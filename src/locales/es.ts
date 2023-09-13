@@ -123,6 +123,20 @@ const SpanishTranslation: TTranslation = {
   select: {
     "select-one": "Selecione uma das opções",
   },
+  sidebar: {
+    home: "Inicial",
+    general: "Geral",
+    services: "Serviços",
+    calls: "Chamadas",
+    dashboard: "Dashboard",
+    adherence: "Aderência",
+    "real-time": "Tempo Real",
+    workgroups: "Grupo de Trabalhos",
+    staffing: "Pessoal",
+    scales: "Escalas",
+    scalesgroups: "Grupo de Escalas",
+    forcast: "Forcast",
+  },
   data: {
     users: {
       firstName: "Nome",
@@ -156,20 +170,6 @@ const SpanishTranslation: TTranslation = {
       contact_right_person: "Contato con la persona cierta",
       loggeds_agents: "Agentes Logados",
       average_service_time: "Tempo médio de serviço",
-    },
-    sidebar: {
-      home: "Inicial",
-      general: "Geral",
-      services: "Serviços",
-      calls: "Chamadas",
-      dashboard: "Dashboard",
-      adherence: "Aderência",
-      "real-time": "Tempo Real",
-      workgroups: "Grupo de Trabalhos",
-      staffing: "Pessoal",
-      scales: "Escalas",
-      scalesgroups: "Grupo de Escalas",
-      forcast: "Forcast",
     },
   },
 };

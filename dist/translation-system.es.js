@@ -1635,6 +1635,20 @@ const Te = (i, e) => y.t(i, e), Pe = {
   select: {
     "select-one": "Select one of the options"
   },
+  sidebar: {
+    general: "General",
+    services: "Services",
+    calls: "Calls",
+    dashboard: "Dashboard",
+    adherence: "Adherence",
+    "real-time": "Real Time",
+    workgroups: "Workgroups",
+    staffing: "Staffing",
+    home: "Home",
+    scales: "Scales",
+    scalesgroups: "Scales Groups",
+    forcast: "Forcast"
+  },
   actions: {
     create: "create",
     created: "created",
@@ -1676,20 +1690,6 @@ const Te = (i, e) => y.t(i, e), Pe = {
       contact_right_person: "Contact Right Person",
       loggeds_agents: "Loggeds Agents",
       average_service_time: "Average Service Time"
-    },
-    sidebar: {
-      general: "General",
-      services: "Services",
-      calls: "Calls",
-      dashboard: "Dashboard",
-      adherence: "Adherence",
-      "real-time": "Real Time",
-      workgroups: "Workgroups",
-      staffing: "Staffing",
-      home: "Home",
-      scales: "Scales",
-      scalesgroups: "Scales Groups",
-      forcast: "Forcast"
     }
   }
 }, Ee = {
@@ -1815,6 +1815,20 @@ const Te = (i, e) => y.t(i, e), Pe = {
   select: {
     "select-one": "Selecione uma das opções"
   },
+  sidebar: {
+    home: "Inicial",
+    general: "Geral",
+    services: "Serviços",
+    calls: "Chamadas",
+    dashboard: "Dashboard",
+    adherence: "Aderência",
+    "real-time": "Tempo Real",
+    workgroups: "Grupo de Trabalhos",
+    staffing: "Pessoal",
+    scales: "Escalas",
+    scalesgroups: "Grupo de Escalas",
+    forcast: "Forcast"
+  },
   data: {
     users: {
       firstName: "Nome",
@@ -1848,20 +1862,6 @@ const Te = (i, e) => y.t(i, e), Pe = {
       contact_right_person: "Contato con la persona cierta",
       loggeds_agents: "Agentes Logados",
       average_service_time: "Tempo médio de serviço"
-    },
-    sidebar: {
-      home: "Inicial",
-      general: "Geral",
-      services: "Serviços",
-      calls: "Chamadas",
-      dashboard: "Dashboard",
-      adherence: "Aderência",
-      "real-time": "Tempo Real",
-      workgroups: "Grupo de Trabalhos",
-      staffing: "Pessoal",
-      scales: "Escalas",
-      scalesgroups: "Grupo de Escalas",
-      forcast: "Forcast"
     }
   }
 }, Ae = {
@@ -1979,6 +1979,20 @@ const Te = (i, e) => y.t(i, e), Pe = {
     success: "{{item}} {{action}} com sucesso",
     failed: "{{item}} {{action}} com falha"
   },
+  sidebar: {
+    home: "Inicial",
+    general: "Geral",
+    services: "Serviços",
+    calls: "Chamadas",
+    dashboard: "Dashboard",
+    adherence: "Aderência",
+    "real-time": "Tempo Real",
+    workgroups: "Grupo de Trabalhos",
+    staffing: "Pessoal",
+    scales: "Escalas",
+    scalesgroups: "Grupo de Escalas",
+    forcast: "Forcast"
+  },
   actions: {
     create: "criar",
     created: "criado",
@@ -2020,20 +2034,6 @@ const Te = (i, e) => y.t(i, e), Pe = {
       contact_right_person: "Contato com a pessoa certa",
       loggeds_agents: "Agentes logados",
       average_service_time: "Tempo médio de serviço"
-    },
-    sidebar: {
-      home: "Inicial",
-      general: "Geral",
-      services: "Serviços",
-      calls: "Chamadas",
-      dashboard: "Dashboard",
-      adherence: "Aderência",
-      "real-time": "Tempo Real",
-      workgroups: "Grupo de Trabalhos",
-      staffing: "Pessoal",
-      scales: "Escalas",
-      scalesgroups: "Grupo de Escalas",
-      forcast: "Forcast"
     }
   }
 }, Fe = ({ language: i = "en" }) => {

@@ -113,6 +113,20 @@ declare const EnglishTranslation: {
     select: {
         "select-one": string;
     };
+    sidebar: {
+        general: string;
+        services: string;
+        calls: string;
+        dashboard: string;
+        adherence: string;
+        "real-time": string;
+        workgroups: string;
+        staffing: string;
+        home: string;
+        scales: string;
+        scalesgroups: string;
+        forcast: string;
+    };
     actions: {
         create: string;
         created: string;
@@ -154,20 +168,6 @@ declare const EnglishTranslation: {
             contact_right_person: string;
             loggeds_agents: string;
             average_service_time: string;
-        };
-        sidebar: {
-            general: string;
-            services: string;
-            calls: string;
-            dashboard: string;
-            adherence: string;
-            "real-time": string;
-            workgroups: string;
-            staffing: string;
-            home: string;
-            scales: string;
-            scalesgroups: string;
-            forcast: string;
         };
     };
 };
