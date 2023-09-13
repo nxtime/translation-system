@@ -2,8 +2,10 @@ declare const EnglishTranslation: {
     common: {
         ok: string;
         "not-found": string;
+        settings: string;
         home: string;
         user: string;
+        tenant: string;
         admin: string;
         viewer: string;
         role: string;
@@ -152,6 +154,20 @@ declare const EnglishTranslation: {
             contact_right_person: string;
             loggeds_agents: string;
             average_service_time: string;
+        };
+        sidebar: {
+            general: string;
+            services: string;
+            calls: string;
+            dashboard: string;
+            adherence: string;
+            "real-time": string;
+            workgroups: string;
+            staffing: string;
+            home: string;
+            scales: string;
+            scalesgroups: string;
+            forcast: string;
         };
     };
 };

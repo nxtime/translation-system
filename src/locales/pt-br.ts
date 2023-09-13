@@ -3,6 +3,7 @@ import { TTranslation } from "./en";
 const PortugueseTranslation: TTranslation = {
   common: {
     ok: "OK",
+    settings: "Configurações",
     error: "Erro",
     home: "Menu inicial",
     add: "Adicionar",
@@ -28,6 +29,7 @@ const PortugueseTranslation: TTranslation = {
     table: "Tabela",
     chart: "Gráfico",
     continue: "Continuar",
+    tenant: "Supervisor",
     close: "Fechar",
     save: "Salvar",
     open: "Abrir",
@@ -105,7 +107,7 @@ const PortugueseTranslation: TTranslation = {
     },
   },
   select: {
-    "select-one": "Selecione uma das opções"
+    "select-one": "Selecione uma das opções",
   },
   messages: {
     "not-found": "Nenhum(a) {{item}} foi encontrado(a)",
@@ -127,7 +129,7 @@ const PortugueseTranslation: TTranslation = {
       lastName: "Sobrenome",
       email: "Email",
       role: "Cargo",
-      active: "Ativo"
+      active: "Ativo",
     },
     workgroups: {
       name: "Nome",
@@ -154,6 +156,20 @@ const PortugueseTranslation: TTranslation = {
       contact_right_person: "Contato com a pessoa certa",
       loggeds_agents: "Agentes logados",
       average_service_time: "Tempo médio de serviço",
+    },
+    sidebar: {
+      home: "Inicial",
+      general: "Geral",
+      services: "Serviços",
+      calls: "Chamadas",
+      dashboard: "Dashboard",
+      adherence: "Aderência",
+      "real-time": "Tempo Real",
+      workgroups: "Grupo de Trabalhos",
+      staffing: "Pessoal",
+      scales: "Escalas",
+      scalesgroups: "Grupo de Escalas",
+      forcast: "Forcast",
     },
   },
 };
