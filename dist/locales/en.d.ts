@@ -169,6 +169,14 @@ declare const EnglishTranslation: {
             loggeds_agents: string;
             average_service_time: string;
         };
+        charts: {
+            absenteeism: string;
+            topAdherenceOffenders: string;
+            mediumWorkGroupsAdherence: string;
+            totalWorkGroupsExtraHours: string;
+            mediumWorkGroupsBreaksTimes: string;
+            mediumWorkGroupsLoggedTimes: string;
+        };
     };
 };
 type TTranslation = typeof EnglishTranslation;

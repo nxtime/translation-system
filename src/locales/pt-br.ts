@@ -171,6 +171,14 @@ const PortugueseTranslation: TTranslation = {
       loggeds_agents: "Agentes logados",
       average_service_time: "Tempo médio de serviço",
     },
+    charts: {
+      absenteeism: "Absenteismo",
+      topAdherenceOffenders: "Maiores Ofendedores de Aderência",
+      mediumWorkGroupsAdherence: "Aderência Média de Grupo de Trabalho",
+      totalWorkGroupsExtraHours: "Total de Horas Extras por Grupo de Trabalho",
+      mediumWorkGroupsBreaksTimes: "Tempo Médio de Pausa por Grupo de Trabalho",
+      mediumWorkGroupsLoggedTimes: "Tempo Médio Logado por Grupo de Trabalho",
+    },
   },
 };
 

@@ -169,6 +169,14 @@ const EnglishTranslation = {
       loggeds_agents: "Loggeds Agents",
       average_service_time: "Average Service Time",
     },
+    charts: {
+      absenteeism: "Absenteeism",
+      topAdherenceOffenders: "Top Adherence Offenders",
+      mediumWorkGroupsAdherence: "Medium WorkGroups Adherence",
+      totalWorkGroupsExtraHours: "Total Work Groups Extra Hours",
+      mediumWorkGroupsBreaksTimes: "Medium Work Groups Breaks Times",
+      mediumWorkGroupsLoggedTimes: "Medium Work Groups Logged Times",
+    },
   },
 };
 
