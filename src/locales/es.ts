@@ -3,18 +3,20 @@ import { TTranslation } from "./en";
 const SpanishTranslation: TTranslation = {
   common: {
     ok: "Aceptar",
+    workgroup: "Grupo de Trabajo",
     "not-found": "No Encontrado",
-    settings: "Configuración",
+    settings: "Configuraciones",
     home: "Inicio",
     user: "Usuario",
     tenant: "Inquilino",
     admin: "Administrador",
     calls: "Llamadas",
-    viewer: "Visor",
+    viewer: "Visualizador",
     role: "Rol",
     roles: "Roles",
+    attempt: "Intento",
     add: "Agregar",
-    adherence: "Adherencia",
+    adherence: "Adhesión",
     "file-type": "Tipo de Archivo",
     file: "Archivo",
     "contact-right-person": "Contactar a la Persona Correcta",
@@ -45,16 +47,16 @@ const SpanishTranslation: TTranslation = {
     applications: "Aplicaciones",
     general: "General",
     workgroups: "Grupos de Trabajo",
-    scalesgroups: "Grupos de Escalas",
+    scalesgroups: "Grupo de Escalas",
     scales: "Escalas",
     remove: "Eliminar",
     company: "Empresa",
     companies: "Empresas",
-    database: "Base de Datos",
+    database: "Bases de Datos",
     theme: "Tema",
     language: "Idioma",
     search: "Buscar",
-    done: "Listo",
+    done: "Hecho",
     next: "Siguiente",
     previous: "Anterior",
     loading: "Cargando",
@@ -63,7 +65,23 @@ const SpanishTranslation: TTranslation = {
     start: "Comenzar",
     entry: "Entrada",
     end: "Fin",
-    finish: "Terminar",
+    finish: "Finalizar",
+    weekdays: "Días de la Semana",
+    weekdaysNames: {
+      sunday: "Domingo",
+      monday: "Lunes",
+      tuesday: "Martes",
+      wednesday: "Miércoles",
+      thursday: "Jueves",
+      friday: "Viernes",
+      saturday: "Sábado"
+    },
+    charts: {
+      types: "Tipos de Gráficos",
+      bar: "Barra",
+      line: "Línea",
+      time: "Tiempo"
+    }
   },
   complement: {
     add: "Agregar {{complement}}",
@@ -73,37 +91,37 @@ const SpanishTranslation: TTranslation = {
     new: "Nuevo {{complement}}",
     edit: "Editar {{complement}}",
     open: "Abrir {{complement}}",
-    close: "Cerrar {{complement}}",
+    close: "Cerrar {{complement}}"
   },
   settings: {
     "application-title": "Seleccione una empresa y una base de datos",
     tabs: {
       personal: "Personal",
-      application: "Aplicación",
+      application: "Aplicación"
     },
     themes: {
       coffe: "Café",
       light: "Claro",
       dark: "Oscuro",
-      forest: "Bosque",
+      forest: "Bosque"
     },
     langs: {
       english: "Inglés",
       portuguese: "Portugués",
-      spanish: "Español",
-    },
+      spanish: "Español"
+    }
   },
   messages: {
     "not-found": "No se encontró {{item}}",
-    typing: "Escriba su {{item}}...",
+    typing: "Escribe tu {{item}}...",
     success: "{{item}} {{action}} exitosamente",
-    failed: "{{item}} {{action}} falló",
+    failed: "{{item}} {{action}} falló"
   },
   table: {
     page: "Página",
     of: "de",
     "per-page": "Por página",
-    items: "Elementos",
+    items: "Elementos"
   },
   picker: {
     date: {
@@ -114,28 +132,29 @@ const SpanishTranslation: TTranslation = {
         we: "Mi",
         th: "Ju",
         fr: "Vi",
-        sa: "Sá",
-      },
-    },
+        sa: "Sá"
+      }
+    }
   },
   select: {
-    "select-one": "Selecciona una de las opciones",
+    "select-one": "Selecciona una de las opciones"
   },
   sidebar: {
     general: "General",
+    agents: "Agentes",
+    users: "Usuarios",
     services: "Servicios",
     calls: "Llamadas",
-    users: "Usuarios",
-    agents: "Agentes",
+    "contact-right-person": "Contactar a la Persona Correcta",
     dashboard: "Tablero",
-    adherence: "Adherencia",
+    adherence: "Adhesión",
     "real-time": "Tiempo Real",
     workgroups: "Grupos de Trabajo",
-    staffing: "Dotación",
+    staffing: "Personal",
     home: "Inicio",
     scales: "Escalas",
     scalesgroups: "Grupos de Escalas",
-    forecast: "Pronóstico",
+    forecast: "Pronóstico"
   },
   actions: {
     create: "crear",
@@ -145,33 +164,33 @@ const SpanishTranslation: TTranslation = {
     update: "actualizar",
     updated: "actualizado",
     remove: "eliminar",
-    removed: "eliminado",
+    removed: "eliminado"
   },
   data: {
     users: {
-      firstName: "Primer Nombre",
+      firstName: "Nombre",
       lastName: "Apellido",
       email: "Correo Electrónico",
       role: "Rol",
-      active: "Activo",
+      active: "Activo"
     },
     workgroups: {
       name: "Nombre",
       agents: "Agentes",
       workGroups: "Grupos de Trabajo",
       timeScale: "Escala de Tiempo",
-      supervisor: "Supervisor",
+      supervisor: "Supervisor"
     },
     scales: {
-      firstName: "Primer Nombre",
+      firstName: "Nombre",
       lastName: "Apellido",
-      baseUserId: "ID del Usuario Base",
+      baseUserId: "ID del Usuario Base"
     },
     scalesgroups: {
       name: "Nombre",
       timeScale: "Escala de Tiempo",
       workGroups: "Grupos de Trabajo",
-      breaks: "Descansos",
+      breaks: "Descansos"
     },
     services: {
       attempts: "Intentos",
@@ -180,24 +199,30 @@ const SpanishTranslation: TTranslation = {
       contact_right_person: "Contactar a la Persona Correcta",
       loggeds_agents: "Agentes Registrados",
       average_service_time: "Tiempo Promedio de Servicio",
+      occupancyRate: "Tasa de Ocupación",
+      productivityRate: "Tasa de Productividad",
+      availabilityFee: "Tarifa de Disponibilidad",
+      averageTimeLoggedIn: "Tiempo Promedio Conectado",
+      averageTimeSpoken: "Tiempo Promedio Hablado",
+      averageIdleTime: "Tiempo Promedio de Inactividad",
+      averageOperatingTime: "Tiempo Promedio de Operación",
+      hitRate: "Tasa de Éxito"
     },
     charts: {
-      absenteeism: "Ausentismo",
-      topAdherenceOffenders: "Principales Infractores de Adherencia",
-      mediumWorkGroupsAdherence: "Adherencia Media de Grupos de Trabajo",
+      absenteeism: "Absentismo",
+      topAdherenceOffenders: "Principales Infractores de Adhesión",
+      mediumWorkGroupsAdherence: "Adhesión Media de Grupos de Trabajo",
       totalWorkGroupsExtraHours: "Total de Horas Extra de Grupos de Trabajo",
-      mediumWorkGroupsBreaksTimes:
-        "Tiempo Medio de Descansos de Grupos de Trabajo",
-      mediumWorkGroupsLoggedTimes:
-        "Tiempo Medio de Registro de Grupos de Trabajo",
+      mediumWorkGroupsBreaksTimes: "Tiempos Medios de Descansos de Grupos de Trabajo",
+      mediumWorkGroupsLoggedTimes: "Tiempos Medios de Registro de Grupos de Trabajo"
     },
     "real-time": {
       serviceName: "Nombre del Servicio",
       serviceId: "ID del Servicio",
-      allAgentsLoggeds: "Agentes Registrados",
+      allAgentsLoggeds: "Agentes Conectados",
       allAgentsInCall: "Agentes en Llamada",
       allAgentIdle: "Agentes Inactivos",
-      allAgentNotReady: "Agentes No Disponibles",
+      allAgentNotReady: "Agentes No Listos",
       allAgentOthers: "Otros",
       occupancyRate: "Tasa de Ocupación",
       inHold: "En Espera",
@@ -210,13 +235,14 @@ const SpanishTranslation: TTranslation = {
       notAnsweredPercentage: "Porcentaje No Atendidas",
       busy: "Ocupadas",
       busyPercentage: "Porcentaje Ocupadas",
-      notAttend: "No Atendido",
-      notAttendPercentage: "Porcentaje No Atendido",
+      notAttend: "No Atendidas",
+      notAttendPercentage: "Porcentaje No Atendidas",
       message: "Mensaje",
       messagePercentage: "Porcentaje de Mensajes",
-      cpc: "Contactar a la Persona Correcta",
-    },
-  },
+      cpc: "Contactar a la Persona Correcta"
+    }
+  }
 };
+
 
 export default SpanishTranslation;

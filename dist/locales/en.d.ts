@@ -1,6 +1,7 @@
 declare const EnglishTranslation: {
     common: {
         ok: string;
+        workgroup: string;
         "not-found": string;
         settings: string;
         home: string;
@@ -11,6 +12,7 @@ declare const EnglishTranslation: {
         viewer: string;
         role: string;
         roles: string;
+        attempt: string;
         add: string;
         adherence: string;
         "file-type": string;
@@ -62,6 +64,22 @@ declare const EnglishTranslation: {
         entry: string;
         end: string;
         finish: string;
+        weekdays: string;
+        weekdaysNames: {
+            sunday: string;
+            monday: string;
+            tuesday: string;
+            wednesday: string;
+            thursday: string;
+            friday: string;
+            saturday: string;
+        };
+        charts: {
+            types: string;
+            bar: string;
+            line: string;
+            time: string;
+        };
     };
     complement: {
         add: string;
@@ -121,10 +139,11 @@ declare const EnglishTranslation: {
     };
     sidebar: {
         general: string;
+        agents: string;
+        users: string;
         services: string;
         calls: string;
-        users: string;
-        agents: string;
+        "contact-right-person": string;
         dashboard: string;
         adherence: string;
         "real-time": string;
@@ -178,6 +197,14 @@ declare const EnglishTranslation: {
             contact_right_person: string;
             loggeds_agents: string;
             average_service_time: string;
+            occupancyRate: string;
+            productivityRate: string;
+            availabilityFee: string;
+            averageTimeLoggedIn: string;
+            averageTimeSpoken: string;
+            averageIdleTime: string;
+            averageOperatingTime: string;
+            hitRate: string;
         };
         charts: {
             absenteeism: string;
