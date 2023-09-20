@@ -4,6 +4,7 @@ declare const EnglishTranslation: {
         workgroup: string;
         "not-found": string;
         settings: string;
+        period: string;
         home: string;
         user: string;
         tenant: string;
@@ -238,6 +239,22 @@ declare const EnglishTranslation: {
             message: string;
             messagePercentage: string;
             cpc: string;
+        };
+        adherence: {
+            companyOperationBreakScaledTime: string;
+            companyOperationBreakWorkedTime: string;
+            companyOperationLoggedTime: string;
+            companyOperationScaledTime: string;
+            totalCompanyAdherence: string;
+            totalCompanyBreaksAdherence: string;
+            groupName: string;
+            agents: string;
+            totalOperationLoggedTime: string;
+            totalOperationBreakWorkedTime: string;
+            totalOperationScaledTime: string;
+            totalOperationBreakScaledTime: string;
+            breakAdherence: string;
+            adherence: string;
         };
     };
 };

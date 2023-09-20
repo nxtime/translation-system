@@ -5,6 +5,7 @@ const SpanishTranslation: TTranslation = {
     ok: "Aceptar",
     workgroup: "Grupo de Trabajo",
     "not-found": "No Encontrado",
+    period: "Periodo",
     settings: "Configuraciones",
     home: "Inicio",
     user: "Usuario",
@@ -240,7 +241,23 @@ const SpanishTranslation: TTranslation = {
       message: "Mensaje",
       messagePercentage: "Porcentaje de Mensajes",
       cpc: "Contactar a la Persona Correcta"
-    }
+    },
+    adherence: {
+      companyOperationBreakScaledTime: "Tempo Total de Pausa Escalada da Empresa",
+      companyOperationBreakWorkedTime: "Tempo Total de Pausa Trabalhada da Empresa",
+      companyOperationLoggedTime: "Tempo de Operação Ativa da Empresa",
+      companyOperationScaledTime: "Tempo de Operação Escalada da Empresa",
+      totalCompanyAdherence: "Total de Aderência da Empresa",
+      totalCompanyBreaksAdherence: "Total de Aderência em Pausas da Empresa",
+      groupName: "Nome do Grupo",
+      agents: "Agentes",
+      totalOperationLoggedTime: "Tempo Total Logado da Opereação",
+      totalOperationBreakWorkedTime: "Tempo Total de Pausa Trabalhada da Operação",
+      totalOperationScaledTime: "Tempo Total Escalado da Operação",
+      totalOperationBreakScaledTime: "Tempo Total de Pausa Escala da Operação",
+      breakAdherence: "Pausa em Aderência",
+      adherence: "Aderência",
+    },
   }
 };
 
