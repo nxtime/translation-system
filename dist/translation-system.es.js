@@ -91,7 +91,7 @@ function E() {
   });
   return t.resolve = n, t.reject = e, t;
 }
-function Y(n) {
+function Q(n) {
   return n == null ? "" : "" + n;
 }
 function ue(n, e, t) {
@@ -118,7 +118,7 @@ function W(n, e, t) {
     k: a(r.shift())
   };
 }
-function q(n, e, t) {
+function Y(n, e, t) {
   const {
     obj: a,
     k: s
@@ -177,7 +177,7 @@ function he(n, e, t) {
   }
   return r;
 }
-function V(n, e) {
+function M(n, e) {
   let t = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : ".";
   if (!n)
     return;
@@ -203,13 +203,13 @@ function V(n, e) {
           return o[l];
       }
       const d = a.slice(r + i).join(t);
-      return d ? V(o, d, t) : void 0;
+      return d ? M(o, d, t) : void 0;
     }
     s = s[a[r]];
   }
   return s;
 }
-function M(n) {
+function V(n) {
   return n && n.indexOf("_") > 0 ? n.replace("_", "-") : n;
 }
 class Z extends K {
@@ -233,7 +233,7 @@ class Z extends K {
     let l = [e, t];
     a && typeof a != "string" && (l = l.concat(a)), a && typeof a == "string" && (l = l.concat(r ? a.split(r) : a)), e.indexOf(".") > -1 && (l = e.split("."));
     const o = B(this.data, l);
-    return o || !i || typeof a != "string" ? o : V(this.data && this.data[e] && this.data[e][t], a, r);
+    return o || !i || typeof a != "string" ? o : M(this.data && this.data[e] && this.data[e][t], a, r);
   }
   addResource(e, t, a, s) {
     let r = arguments.length > 4 && arguments[4] !== void 0 ? arguments[4] : {
@@ -241,7 +241,7 @@ class Z extends K {
     };
     const i = r.keySeparator !== void 0 ? r.keySeparator : this.options.keySeparator;
     let l = [e, t];
-    a && (l = l.concat(i ? a.split(i) : a)), e.indexOf(".") > -1 && (l = e.split("."), s = t, t = l[1]), this.addNamespaces(t), q(this.data, l, s), r.silent || this.emit("added", e, t, a, s);
+    a && (l = l.concat(i ? a.split(i) : a)), e.indexOf(".") > -1 && (l = e.split("."), s = t, t = l[1]), this.addNamespaces(t), Y(this.data, l, s), r.silent || this.emit("added", e, t, a, s);
   }
   addResources(e, t, a) {
     let s = arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : {
@@ -262,7 +262,7 @@ class Z extends K {
     s ? ne(o, a, r) : o = {
       ...o,
       ...a
-    }, q(this.data, l, o), i.silent || this.emit("added", e, t, a);
+    }, Y(this.data, l, o), i.silent || this.emit("added", e, t, a);
   }
   removeResourceBundle(e, t) {
     this.hasResourceBundle(e, t) && delete this.data[e][t], this.removeNamespaces(t), this.emit("removed", e, t);
@@ -378,10 +378,10 @@ class U extends K {
         return s ? (g.res = y, g) : y;
       }
       if (r) {
-        const y = h === "[object Array]", T = y ? [] : {}, O = y ? p : f;
+        const y = h === "[object Array]", T = y ? [] : {}, A = y ? p : f;
         for (const v in u)
           if (Object.prototype.hasOwnProperty.call(u, v)) {
-            const F = `${O}${r}${v}`;
+            const F = `${A}${r}${v}`;
             T[v] = this.translate(F, {
               ...t,
               joinArrays: !1,
@@ -394,33 +394,33 @@ class U extends K {
       u = u.join(x), u && (u = this.extendTranslation(u, e, t, a));
     else {
       let y = !1, T = !1;
-      const O = t.count !== void 0 && typeof t.count != "string", v = U.hasDefaultValue(t), F = O ? this.pluralResolver.getSuffix(d, t.count, t) : "", ie = t.ordinal && O ? this.pluralResolver.getSuffix(d, t.count, {
+      const A = t.count !== void 0 && typeof t.count != "string", v = U.hasDefaultValue(t), F = A ? this.pluralResolver.getSuffix(d, t.count, t) : "", ie = t.ordinal && A ? this.pluralResolver.getSuffix(d, t.count, {
         ordinal: !1
       }) : "", P = t[`defaultValue${F}`] || t[`defaultValue${ie}`] || t.defaultValue;
       !this.isValidLookup(u) && v && (y = !0, u = P), this.isValidLookup(u) || (T = !0, u = i);
       const oe = (t.missingKeyNoValueFallbackToKey || this.options.missingKeyNoValueFallbackToKey) && T ? void 0 : u, C = v && P !== u && this.options.updateMissing;
       if (T || y || C) {
         if (this.logger.log(C ? "updateKey" : "missingKey", d, o, i, C ? P : u), r) {
-          const A = this.resolve(i, {
+          const O = this.resolve(i, {
             ...t,
             keySeparator: !1
           });
-          A && A.res && this.logger.warn("Seems the loaded translations were in flat JSON format instead of nested. Either set keySeparator: false on init or make sure your translations are published in nested format.");
+          O && O.res && this.logger.warn("Seems the loaded translations were in flat JSON format instead of nested. Either set keySeparator: false on init or make sure your translations are published in nested format.");
         }
         let R = [];
         const j = this.languageUtils.getFallbackCodes(this.options.fallbackLng, t.lng || this.language);
         if (this.options.saveMissingTo === "fallback" && j && j[0])
-          for (let A = 0; A < j.length; A++)
-            R.push(j[A]);
+          for (let O = 0; O < j.length; O++)
+            R.push(j[O]);
         else
           this.options.saveMissingTo === "all" ? R = this.languageUtils.toResolveHierarchy(t.lng || this.language) : R.push(t.lng || this.language);
-        const z = (A, L, J) => {
-          const Q = v && J !== u ? J : oe;
-          this.options.missingKeyHandler ? this.options.missingKeyHandler(A, o, L, Q, C, t) : this.backendConnector && this.backendConnector.saveMissing && this.backendConnector.saveMissing(A, o, L, Q, C, t), this.emit("missingKey", A, o, L, u);
+        const z = (O, L, J) => {
+          const q = v && J !== u ? J : oe;
+          this.options.missingKeyHandler ? this.options.missingKeyHandler(O, o, L, q, C, t) : this.backendConnector && this.backendConnector.saveMissing && this.backendConnector.saveMissing(O, o, L, q, C, t), this.emit("missingKey", O, o, L, u);
         };
-        this.options.saveMissing && (this.options.saveMissingPlurals && O ? R.forEach((A) => {
-          this.pluralResolver.getSuffixes(A, t).forEach((L) => {
-            z([A], i + L, t[`defaultValue${L}`] || P);
+        this.options.saveMissing && (this.options.saveMissingPlurals && A ? R.forEach((O) => {
+          this.pluralResolver.getSuffixes(O, t).forEach((L) => {
+            z([O], i + L, t[`defaultValue${L}`] || P);
           });
         }) : z(R, i, P));
       }
@@ -492,10 +492,10 @@ class U extends K {
           else {
             let y;
             u && (y = this.pluralResolver.getSuffix(x, t.count, t));
-            const T = `${this.options.pluralSeparator}zero`, O = `${this.options.pluralSeparator}ordinal${this.options.pluralSeparator}`;
-            if (u && (S.push(c + y), t.ordinal && y.indexOf(O) === 0 && S.push(c + y.replace(O, this.options.pluralSeparator)), f && S.push(c + T)), p) {
+            const T = `${this.options.pluralSeparator}zero`, A = `${this.options.pluralSeparator}ordinal${this.options.pluralSeparator}`;
+            if (u && (S.push(c + y), t.ordinal && y.indexOf(A) === 0 && S.push(c + y.replace(A, this.options.pluralSeparator)), f && S.push(c + T)), p) {
               const v = `${c}${this.options.contextSeparator}${t.context}`;
-              S.push(v), u && (S.push(v + y), t.ordinal && y.indexOf(O) === 0 && S.push(v + y.replace(O, this.options.pluralSeparator)), f && S.push(v + T));
+              S.push(v), u && (S.push(v + y), t.ordinal && y.indexOf(A) === 0 && S.push(v + y.replace(A, this.options.pluralSeparator)), f && S.push(v + T));
             }
           }
           let $;
@@ -534,13 +534,13 @@ class _ {
     this.options = e, this.supportedLngs = this.options.supportedLngs || !1, this.logger = w.create("languageUtils");
   }
   getScriptPartFromCode(e) {
-    if (e = M(e), !e || e.indexOf("-") < 0)
+    if (e = V(e), !e || e.indexOf("-") < 0)
       return null;
     const t = e.split("-");
     return t.length === 2 || (t.pop(), t[t.length - 1].toLowerCase() === "x") ? null : this.formatLanguageCode(t.join("-"));
   }
   getLanguagePartFromCode(e) {
-    if (e = M(e), !e || e.indexOf("-") < 0)
+    if (e = V(e), !e || e.indexOf("-") < 0)
       return e;
     const t = e.split("-");
     return this.formatLanguageCode(t[0]);
@@ -789,7 +789,7 @@ class xe {
     let t = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
     if (this.shouldUseIntlApi())
       try {
-        return new Intl.PluralRules(M(e), {
+        return new Intl.PluralRules(V(e), {
           type: t.ordinal ? "ordinal" : "cardinal"
         });
       } catch {
@@ -829,7 +829,7 @@ class xe {
 }
 function te(n, e, t) {
   let a = arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : ".", s = arguments.length > 4 && arguments[4] !== void 0 ? arguments[4] : !0, r = ce(n, e, t);
-  return !r && s && typeof t == "string" && (r = V(n, t, a), r === void 0 && (r = V(e, t, a))), r;
+  return !r && s && typeof t == "string" && (r = M(n, t, a), r === void 0 && (r = M(e, t, a))), r;
 }
 class Te {
   constructor() {
@@ -900,7 +900,7 @@ class Te {
           } else
             this.logger.warn(`missed to pass in variable ${h} for interpolating ${e}`), i = "";
         else
-          typeof i != "string" && !this.useRawValueToEscape && (i = Y(i));
+          typeof i != "string" && !this.useRawValueToEscape && (i = Q(i));
         const m = p.safeValue(i);
         if (e = e.replace(r[0], m), u ? (p.regex.lastIndex += i.length, p.regex.lastIndex -= r[0].length) : p.regex.lastIndex = 0, l++, l >= this.maxReplaces)
           break;
@@ -940,7 +940,7 @@ class Te {
       }
       if (r = t(l.call(this, s[1].trim(), i), i), r && s[0] === e && typeof r != "string")
         return r;
-      typeof r != "string" && (r = Y(r)), r || (this.logger.warn(`missed to resolve ${s[1]} for nesting ${e}`), r = ""), d && (r = o.reduce((c, g) => this.format(c, g, a.lng, {
+      typeof r != "string" && (r = Q(r)), r || (this.logger.warn(`missed to resolve ${s[1]} for nesting ${e}`), r = ""), d && (r = o.reduce((c, g) => this.format(c, g, a.lng, {
         ...a,
         interpolationkey: s[1].trim()
       }), r.trim())), e = e.replace(s[0], r), this.regexp.lastIndex = 0;
@@ -948,7 +948,7 @@ class Te {
     return e;
   }
 }
-function Ae(n) {
+function Oe(n) {
   let e = n.toLowerCase().trim();
   const t = {};
   if (n.indexOf("(") > -1) {
@@ -972,10 +972,10 @@ function k(n) {
   return function(a, s, r) {
     const i = s + JSON.stringify(r);
     let l = e[i];
-    return l || (l = n(M(s), r), e[i] = l), l(a);
+    return l || (l = n(V(s), r), e[i] = l), l(a);
   };
 }
-class Oe {
+class Ae {
   constructor() {
     let e = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {};
     this.logger = w.create("formatter"), this.options = e, this.formats = {
@@ -1030,7 +1030,7 @@ class Oe {
       const {
         formatName: d,
         formatOptions: c
-      } = Ae(o);
+      } = Oe(o);
       if (this.formats[d]) {
         let g = l;
         try {
@@ -1288,7 +1288,7 @@ class I extends K {
     if (!this.options.isClone) {
       this.modules.logger ? w.init(r(this.modules.logger), this.options) : w.init(null, this.options);
       let c;
-      this.modules.formatter ? c = this.modules.formatter : typeof Intl < "u" && (c = Oe);
+      this.modules.formatter ? c = this.modules.formatter : typeof Intl < "u" && (c = Ae);
       const g = new _(this.options);
       this.store = new Z(this.options.resources, this.options);
       const u = this.services;
@@ -1530,6 +1530,7 @@ const Ie = (n, e) => b.t(n, e), Pe = {
     home: "Home",
     user: "User",
     tenant: "Tenant",
+    "remember-me": "Remember Me",
     admin: "Administrator",
     calls: "Calls",
     viewer: "Viewer",
@@ -1561,6 +1562,7 @@ const Ie = (n, e) => b.t(n, e), Pe = {
     breaks: "Breaks",
     edit: "Edit",
     logout: "Log Out",
+    "sign-in": "Sign In",
     new: "New",
     agents: "Agents",
     agent: "Agent",
@@ -1677,6 +1679,15 @@ const Ie = (n, e) => b.t(n, e), Pe = {
     scalesgroups: "Scales Groups",
     forecast: "Forecast"
   },
+  conditions: {
+    none: "None",
+    greater: "Greater",
+    greaterOrEqual: "Greater Or Equal",
+    lesser: "Less",
+    lesserOrEqual: "Less Or Equal",
+    equal: "Equal",
+    different: "Different"
+  },
   actions: {
     create: "create",
     created: "created",
@@ -1789,6 +1800,8 @@ const Ie = (n, e) => b.t(n, e), Pe = {
     home: "Inicio",
     user: "Usuario",
     tenant: "Inquilino",
+    "remember-me": "Lembrar-me",
+    "sign-in": "Logar",
     admin: "Administrador",
     calls: "Llamadas",
     viewer: "Visualizador",
@@ -1946,6 +1959,15 @@ const Ie = (n, e) => b.t(n, e), Pe = {
     remove: "eliminar",
     removed: "eliminado"
   },
+  conditions: {
+    none: "Nenhum",
+    greater: "Maior",
+    greaterOrEqual: "Acima ou Igual",
+    lesser: "Menor",
+    lesserOrEqual: "Menor ou Igual",
+    equal: "Equal",
+    different: "Diferente"
+  },
   data: {
     users: {
       firstName: "Nombre",
@@ -2050,6 +2072,8 @@ const Ie = (n, e) => b.t(n, e), Pe = {
     tenant: "Inquilino",
     admin: "Administrador",
     calls: "Chamadas",
+    "remember-me": "Lembrar-me",
+    "sign-in": "Logar",
     viewer: "Visualizador",
     role: "Cargo",
     roles: "Cargos",
@@ -2205,6 +2229,15 @@ const Ie = (n, e) => b.t(n, e), Pe = {
     remove: "remover",
     removed: "removido"
   },
+  conditions: {
+    none: "Nenhum",
+    greater: "Maior",
+    greaterOrEqual: "Acima ou Igual",
+    lesser: "Menor",
+    lesserOrEqual: "Menor ou Igual",
+    equal: "Equal",
+    different: "Diferente"
+  },
   data: {
     users: {
       firstName: "Primeiro Nome",
@@ -2289,7 +2322,7 @@ const Ie = (n, e) => b.t(n, e), Pe = {
       totalCompanyBreaksAdherence: "Total de Aderência em Pausas da Empresa",
       groupName: "Nome do Grupo",
       agents: "Agentes",
-      totalOperationLoggedTime: "Tempo Total Logado da Opereação",
+      totalOperationLoggedTime: "Tempo Total Logado da Operação",
       totalOperationBreakWorkedTime: "Tempo Total de Pausa Trabalhada da Operação",
       totalOperationScaledTime: "Tempo Total Escalado da Operação",
       totalOperationBreakScaledTime: "Tempo Total de Pausa Escala da Operação",

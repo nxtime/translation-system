@@ -8,6 +8,7 @@ const EnglishTranslation = {
     home: "Home",
     user: "User",
     tenant: "Tenant",
+    "remember-me": "Remember Me",
     admin: "Administrator",
     calls: "Calls",
     viewer: "Viewer",
@@ -39,6 +40,7 @@ const EnglishTranslation = {
     breaks: "Breaks",
     edit: "Edit",
     logout: "Log Out",
+    "sign-in": "Sign In",
     new: "New",
     agents: "Agents",
     agent: "Agent",
@@ -154,6 +156,15 @@ const EnglishTranslation = {
     scales: "Scales",
     scalesgroups: "Scales Groups",
     forecast: "Forecast",
+  },
+  conditions: {
+    none: "None",
+    greater: "Greater",
+    greaterOrEqual: "Greater Or Equal",
+    lesser: "Less",
+    lesserOrEqual: "Less Or Equal",
+    equal: "Equal",
+    different: "Different"
   },
   actions: {
     create: "create",

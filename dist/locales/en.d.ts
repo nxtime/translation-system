@@ -8,6 +8,7 @@ declare const EnglishTranslation: {
         home: string;
         user: string;
         tenant: string;
+        "remember-me": string;
         admin: string;
         calls: string;
         viewer: string;
@@ -39,6 +40,7 @@ declare const EnglishTranslation: {
         breaks: string;
         edit: string;
         logout: string;
+        "sign-in": string;
         new: string;
         agents: string;
         agent: string;
@@ -154,6 +156,15 @@ declare const EnglishTranslation: {
         scales: string;
         scalesgroups: string;
         forecast: string;
+    };
+    conditions: {
+        none: string;
+        greater: string;
+        greaterOrEqual: string;
+        lesser: string;
+        lesserOrEqual: string;
+        equal: string;
+        different: string;
     };
     actions: {
         create: string;

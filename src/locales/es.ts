@@ -10,6 +10,8 @@ const SpanishTranslation: TTranslation = {
     home: "Inicio",
     user: "Usuario",
     tenant: "Inquilino",
+    "remember-me": "Lembrar-me",
+    "sign-in": "Logar",
     admin: "Administrador",
     calls: "Llamadas",
     viewer: "Visualizador",
@@ -166,6 +168,15 @@ const SpanishTranslation: TTranslation = {
     updated: "actualizado",
     remove: "eliminar",
     removed: "eliminado"
+  },
+  conditions: {
+    none: "Nenhum",
+    greater: "Maior",
+    greaterOrEqual: "Acima ou Igual",
+    lesser: "Menor",
+    lesserOrEqual: "Menor ou Igual",
+    equal: "Equal",
+    different: "Diferente"
   },
   data: {
     users: {

@@ -12,6 +12,8 @@ const PortugueseTranslation: TTranslation = {
     tenant: "Inquilino",
     admin: "Administrador",
     calls: "Chamadas",
+    "remember-me": "Lembrar-me",
+    "sign-in": "Logar",
     viewer: "Visualizador",
     role: "Cargo",
     roles: "Cargos",
@@ -167,6 +169,15 @@ const PortugueseTranslation: TTranslation = {
     remove: "remover",
     removed: "removido",
   },
+  conditions: {
+    none: "Nenhum",
+    greater: "Maior",
+    greaterOrEqual: "Acima ou Igual",
+    lesser: "Menor",
+    lesserOrEqual: "Menor ou Igual",
+    equal: "Equal",
+    different: "Diferente"
+  },
   data: {
     users: {
       firstName: "Primeiro Nome",
@@ -251,7 +262,7 @@ const PortugueseTranslation: TTranslation = {
       totalCompanyBreaksAdherence: "Total de Aderência em Pausas da Empresa",
       groupName: "Nome do Grupo",
       agents: "Agentes",
-      totalOperationLoggedTime: "Tempo Total Logado da Opereação",
+      totalOperationLoggedTime: "Tempo Total Logado da Operação",
       totalOperationBreakWorkedTime: "Tempo Total de Pausa Trabalhada da Operação",
       totalOperationScaledTime: "Tempo Total Escalado da Operação",
       totalOperationBreakScaledTime: "Tempo Total de Pausa Escala da Operação",
