@@ -3,8 +3,11 @@ const EnglishTranslation = {
     ok: "Okay",
     workgroup: "Workgroup",
     "not-found": "Not Found",
+    "accumulated-in-day": "Accumulated in Day",
+    data: "Data",
     settings: "Settings",
     period: "Period",
+    dates: "Dates",
     home: "Home",
     user: "User",
     tenant: "Tenant",
@@ -164,7 +167,7 @@ const EnglishTranslation = {
     lesser: "Less",
     lesserOrEqual: "Less Or Equal",
     equal: "Equal",
-    different: "Different"
+    different: "Different",
   },
   actions: {
     create: "create",
@@ -190,6 +193,13 @@ const EnglishTranslation = {
       workGroups: "Work Groups",
       timeScale: "Time Scale",
       supervisor: "Supervisor",
+    },
+    agents: {
+      firstName: "First Name",
+      lastName: "Last Name",
+      name: "Name",
+      email: "Email",
+      baseUserId: "Base User ID",
     },
     scales: {
       firstName: "First Name",
@@ -266,6 +276,17 @@ const EnglishTranslation = {
       totalOperationBreakScaledTime: "Total Scaled Break Time",
       breakAdherence: "Break Adherence",
       adherence: "Adherence",
+    },
+    forecast: {
+      hour: "Hour",
+      answereds:"Answereds",
+      attempts: "Attempts",
+      hitRate: "Hit Rate",
+      averageServiceTime: "Average Service Time",
+      contactRightPerson: "Contact Right Person",
+      contactRightPersonRatePerTotal: "Contact Right Person Rate per Total",
+      contactRightPersonRatePerAnswered: "Contact Right Person Rate per Answered",
+      loggedsAgents: "Loggeds Agents",
     },
   },
 };

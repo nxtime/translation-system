@@ -3,8 +3,11 @@ declare const EnglishTranslation: {
         ok: string;
         workgroup: string;
         "not-found": string;
+        "accumulated-in-day": string;
+        data: string;
         settings: string;
         period: string;
+        dates: string;
         home: string;
         user: string;
         tenant: string;
@@ -191,6 +194,13 @@ declare const EnglishTranslation: {
             timeScale: string;
             supervisor: string;
         };
+        agents: {
+            firstName: string;
+            lastName: string;
+            name: string;
+            email: string;
+            baseUserId: string;
+        };
         scales: {
             firstName: string;
             lastName: string;
@@ -266,6 +276,17 @@ declare const EnglishTranslation: {
             totalOperationBreakScaledTime: string;
             breakAdherence: string;
             adherence: string;
+        };
+        forecast: {
+            hour: string;
+            answereds: string;
+            attempts: string;
+            hitRate: string;
+            averageServiceTime: string;
+            contactRightPerson: string;
+            contactRightPersonRatePerTotal: string;
+            contactRightPersonRatePerAnswered: string;
+            loggedsAgents: string;
         };
     };
 };

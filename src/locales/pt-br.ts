@@ -5,6 +5,9 @@ const PortugueseTranslation: TTranslation = {
     ok: "Ok",
     workgroup: "Grupo de Trabalho",
     period: "Periodo",
+    dates: "Datas",
+    "accumulated-in-day": "Acumulado no dia",
+    data: "Dados",
     "not-found": "Não Encontrado",
     settings: "Configurações",
     home: "Início",
@@ -115,7 +118,7 @@ const PortugueseTranslation: TTranslation = {
     },
   },
   messages: {
-    "not-found": "Nenhum {{item}} foi encontrado",
+    "not-found": "Nenhum(a) {{item}} foi encontrado(a)",
     typing: "Digite o seu {{item}}...",
     success: "{{item}} {{action}} realizado com sucesso",
     failed: "{{item}} {{action}} falhou",
@@ -176,7 +179,7 @@ const PortugueseTranslation: TTranslation = {
     lesser: "Menor",
     lesserOrEqual: "Menor ou Igual",
     equal: "Equal",
-    different: "Diferente"
+    different: "Diferente",
   },
   data: {
     users: {
@@ -185,6 +188,13 @@ const PortugueseTranslation: TTranslation = {
       email: "E-mail",
       role: "Cargo",
       active: "Ativo",
+    },
+    agents: {
+      firstName: "Nome",
+      name: "Nome",
+      lastName: "Sobrenome",
+      email: "Email",
+      baseUserId: "Usuário Base",
     },
     workgroups: {
       name: "Nome",
@@ -225,7 +235,8 @@ const PortugueseTranslation: TTranslation = {
       topAdherenceOffenders: "Principais Infratores de Adesão",
       mediumWorkGroupsAdherence: "Adesão Média dos Grupos de Trabalho",
       totalWorkGroupsExtraHours: "Total de Horas Extras dos Grupos de Trabalho",
-      mediumWorkGroupsBreaksTimes: "Tempo Médio de Pausas dos Grupos de Trabalho",
+      mediumWorkGroupsBreaksTimes:
+        "Tempo Médio de Pausas dos Grupos de Trabalho",
       mediumWorkGroupsLoggedTimes: "Tempo Médio Logado dos Grupos de Trabalho",
     },
     "real-time": {
@@ -254,8 +265,10 @@ const PortugueseTranslation: TTranslation = {
       cpc: "Contatar a Pessoa Certa",
     },
     adherence: {
-      companyOperationBreakScaledTime: "Tempo Total de Pausa Escalada da Empresa",
-      companyOperationBreakWorkedTime: "Tempo Total de Pausa Trabalhada da Empresa",
+      companyOperationBreakScaledTime:
+        "Tempo Total de Pausa Escalada da Empresa",
+      companyOperationBreakWorkedTime:
+        "Tempo Total de Pausa Trabalhada da Empresa",
       companyOperationLoggedTime: "Tempo de Operação Ativa da Empresa",
       companyOperationScaledTime: "Tempo de Operação Escalada da Empresa",
       totalCompanyAdherence: "Total de Aderência da Empresa",
@@ -263,14 +276,27 @@ const PortugueseTranslation: TTranslation = {
       groupName: "Nome do Grupo",
       agents: "Agentes",
       totalOperationLoggedTime: "Tempo Total Logado da Operação",
-      totalOperationBreakWorkedTime: "Tempo Total de Pausa Trabalhada da Operação",
+      totalOperationBreakWorkedTime:
+        "Tempo Total de Pausa Trabalhada da Operação",
       totalOperationScaledTime: "Tempo Total Escalado da Operação",
       totalOperationBreakScaledTime: "Tempo Total de Pausa Escala da Operação",
       breakAdherence: "Pausa em Aderência",
       adherence: "Aderência",
     },
+    forecast: {
+      hour: "Hora",
+      answereds: "Respostas",
+      attempts: "Tentativas",
+      hitRate: "Percentual De Acerto",
+      averageServiceTime: "Tempo médio de Serviço",
+      contactRightPerson: "Contatar Pessoa Certa",
+      contactRightPersonRatePerTotal:
+        "Percentual Total de Contatar Pessoa Certa",
+      contactRightPersonRatePerAnswered:
+        "Percentual por Resposta de Contatar Pessoa Certa",
+      loggedsAgents: "Agentes Logados",
+    },
   },
 };
-
 
 export default PortugueseTranslation;

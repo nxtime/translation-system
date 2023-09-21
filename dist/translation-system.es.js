@@ -55,8 +55,8 @@ class G {
     return e = e || this.options, e.prefix = e.prefix || this.prefix, new G(this.logger, e);
   }
 }
-var w = new G();
-class K {
+var P = new G();
+class H {
   constructor() {
     this.observers = {};
   }
@@ -209,10 +209,10 @@ function M(n, e) {
   }
   return s;
 }
-function V(n) {
+function U(n) {
   return n && n.indexOf("_") > 0 ? n.replace("_", "-") : n;
 }
-class Z extends K {
+class Z extends H {
   constructor(e) {
     let t = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {
       ns: ["translation"],
@@ -298,10 +298,10 @@ var re = {
   }
 };
 const X = {};
-class U extends K {
+class V extends H {
   constructor(e) {
     let t = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
-    super(), ue(["resourceStore", "languageUtils", "pluralResolver", "interpolator", "backendConnector", "i18nFormat", "utils"], e, this), this.options = t, this.options.keySeparator === void 0 && (this.options.keySeparator = "."), this.logger = w.create("translator");
+    super(), ue(["resourceStore", "languageUtils", "pluralResolver", "interpolator", "backendConnector", "i18nFormat", "utils"], e, this), this.options = t, this.options.keySeparator === void 0 && (this.options.keySeparator = "."), this.logger = P.create("translator");
   }
   changeLanguage(e) {
     e && (this.language = e);
@@ -367,8 +367,8 @@ class U extends K {
     }
     const g = this.resolve(e, t);
     let u = g && g.res;
-    const f = g && g.usedKey || i, p = g && g.exactUsedKey || i, h = Object.prototype.toString.apply(u), m = ["[object Number]", "[object Function]", "[object RegExp]"], x = t.joinArrays !== void 0 ? t.joinArrays : this.options.joinArrays, S = !this.i18nFormat || this.i18nFormat.handleAsObject;
-    if (S && u && (typeof u != "string" && typeof u != "boolean" && typeof u != "number") && m.indexOf(h) < 0 && !(typeof x == "string" && h === "[object Array]")) {
+    const f = g && g.usedKey || i, p = g && g.exactUsedKey || i, h = Object.prototype.toString.apply(u), m = ["[object Number]", "[object Function]", "[object RegExp]"], T = t.joinArrays !== void 0 ? t.joinArrays : this.options.joinArrays, v = !this.i18nFormat || this.i18nFormat.handleAsObject;
+    if (v && u && (typeof u != "string" && typeof u != "boolean" && typeof u != "number") && m.indexOf(h) < 0 && !(typeof T == "string" && h === "[object Array]")) {
       if (!t.returnObjects && !this.options.returnObjects) {
         this.options.returnedObjectHandler || this.logger.warn("accessing an object - but returnObjects options is not enabled!");
         const y = this.options.returnedObjectHandler ? this.options.returnedObjectHandler(f, u, {
@@ -378,53 +378,53 @@ class U extends K {
         return s ? (g.res = y, g) : y;
       }
       if (r) {
-        const y = h === "[object Array]", T = y ? [] : {}, A = y ? p : f;
-        for (const v in u)
-          if (Object.prototype.hasOwnProperty.call(u, v)) {
-            const F = `${A}${r}${v}`;
-            T[v] = this.translate(F, {
+        const y = h === "[object Array]", x = y ? [] : {}, O = y ? p : f;
+        for (const S in u)
+          if (Object.prototype.hasOwnProperty.call(u, S)) {
+            const F = `${O}${r}${S}`;
+            x[S] = this.translate(F, {
               ...t,
               joinArrays: !1,
               ns: l
-            }), T[v] === F && (T[v] = u[v]);
+            }), x[S] === F && (x[S] = u[S]);
           }
-        u = T;
+        u = x;
       }
-    } else if (S && typeof x == "string" && h === "[object Array]")
-      u = u.join(x), u && (u = this.extendTranslation(u, e, t, a));
+    } else if (v && typeof T == "string" && h === "[object Array]")
+      u = u.join(T), u && (u = this.extendTranslation(u, e, t, a));
     else {
-      let y = !1, T = !1;
-      const A = t.count !== void 0 && typeof t.count != "string", v = U.hasDefaultValue(t), F = A ? this.pluralResolver.getSuffix(d, t.count, t) : "", ie = t.ordinal && A ? this.pluralResolver.getSuffix(d, t.count, {
+      let y = !1, x = !1;
+      const O = t.count !== void 0 && typeof t.count != "string", S = V.hasDefaultValue(t), F = O ? this.pluralResolver.getSuffix(d, t.count, t) : "", ie = t.ordinal && O ? this.pluralResolver.getSuffix(d, t.count, {
         ordinal: !1
-      }) : "", P = t[`defaultValue${F}`] || t[`defaultValue${ie}`] || t.defaultValue;
-      !this.isValidLookup(u) && v && (y = !0, u = P), this.isValidLookup(u) || (T = !0, u = i);
-      const oe = (t.missingKeyNoValueFallbackToKey || this.options.missingKeyNoValueFallbackToKey) && T ? void 0 : u, C = v && P !== u && this.options.updateMissing;
-      if (T || y || C) {
-        if (this.logger.log(C ? "updateKey" : "missingKey", d, o, i, C ? P : u), r) {
-          const O = this.resolve(i, {
+      }) : "", C = t[`defaultValue${F}`] || t[`defaultValue${ie}`] || t.defaultValue;
+      !this.isValidLookup(u) && S && (y = !0, u = C), this.isValidLookup(u) || (x = !0, u = i);
+      const oe = (t.missingKeyNoValueFallbackToKey || this.options.missingKeyNoValueFallbackToKey) && x ? void 0 : u, k = S && C !== u && this.options.updateMissing;
+      if (x || y || k) {
+        if (this.logger.log(k ? "updateKey" : "missingKey", d, o, i, k ? C : u), r) {
+          const A = this.resolve(i, {
             ...t,
             keySeparator: !1
           });
-          O && O.res && this.logger.warn("Seems the loaded translations were in flat JSON format instead of nested. Either set keySeparator: false on init or make sure your translations are published in nested format.");
+          A && A.res && this.logger.warn("Seems the loaded translations were in flat JSON format instead of nested. Either set keySeparator: false on init or make sure your translations are published in nested format.");
         }
         let R = [];
         const j = this.languageUtils.getFallbackCodes(this.options.fallbackLng, t.lng || this.language);
         if (this.options.saveMissingTo === "fallback" && j && j[0])
-          for (let O = 0; O < j.length; O++)
-            R.push(j[O]);
+          for (let A = 0; A < j.length; A++)
+            R.push(j[A]);
         else
           this.options.saveMissingTo === "all" ? R = this.languageUtils.toResolveHierarchy(t.lng || this.language) : R.push(t.lng || this.language);
-        const z = (O, L, J) => {
-          const q = v && J !== u ? J : oe;
-          this.options.missingKeyHandler ? this.options.missingKeyHandler(O, o, L, q, C, t) : this.backendConnector && this.backendConnector.saveMissing && this.backendConnector.saveMissing(O, o, L, q, C, t), this.emit("missingKey", O, o, L, u);
+        const z = (A, w, J) => {
+          const q = S && J !== u ? J : oe;
+          this.options.missingKeyHandler ? this.options.missingKeyHandler(A, o, w, q, k, t) : this.backendConnector && this.backendConnector.saveMissing && this.backendConnector.saveMissing(A, o, w, q, k, t), this.emit("missingKey", A, o, w, u);
         };
-        this.options.saveMissing && (this.options.saveMissingPlurals && A ? R.forEach((O) => {
-          this.pluralResolver.getSuffixes(O, t).forEach((L) => {
-            z([O], i + L, t[`defaultValue${L}`] || P);
+        this.options.saveMissing && (this.options.saveMissingPlurals && O ? R.forEach((A) => {
+          this.pluralResolver.getSuffixes(A, t).forEach((w) => {
+            z([A], i + w, t[`defaultValue${w}`] || C);
           });
-        }) : z(R, i, P));
+        }) : z(R, i, C));
       }
-      u = this.extendTranslation(u, e, t, g, a), T && u === i && this.options.appendNamespaceToMissingKey && (u = `${o}:${i}`), (T || y) && this.options.parseMissingKeyHandler && (this.options.compatibilityAPI !== "v1" ? u = this.options.parseMissingKeyHandler(this.options.appendNamespaceToMissingKey ? `${o}:${i}` : i, y ? u : void 0) : u = this.options.parseMissingKeyHandler(u));
+      u = this.extendTranslation(u, e, t, g, a), x && u === i && this.options.appendNamespaceToMissingKey && (u = `${o}:${i}`), (x || y) && this.options.parseMissingKeyHandler && (this.options.compatibilityAPI !== "v1" ? u = this.options.parseMissingKeyHandler(this.options.appendNamespaceToMissingKey ? `${o}:${i}` : i, y ? u : void 0) : u = this.options.parseMissingKeyHandler(u));
     }
     return s ? (g.res = u, g) : u;
   }
@@ -482,25 +482,25 @@ class U extends K {
       this.options.fallbackNS && (g = g.concat(this.options.fallbackNS));
       const u = t.count !== void 0 && typeof t.count != "string", f = u && !t.ordinal && t.count === 0 && this.pluralResolver.shouldUseIntlApi(), p = t.context !== void 0 && (typeof t.context == "string" || typeof t.context == "number") && t.context !== "", h = t.lngs ? t.lngs : this.languageUtils.toResolveHierarchy(t.lng || this.language, t.fallbackLng);
       g.forEach((m) => {
-        this.isValidLookup(a) || (l = m, !X[`${h[0]}-${m}`] && this.utils && this.utils.hasLoadedNamespace && !this.utils.hasLoadedNamespace(l) && (X[`${h[0]}-${m}`] = !0, this.logger.warn(`key "${s}" for languages "${h.join(", ")}" won't get resolved as namespace "${l}" was not yet loaded`, "This means something IS WRONG in your setup. You access the t function before i18next.init / i18next.loadNamespace / i18next.changeLanguage was done. Wait for the callback or Promise to resolve before accessing it!!!")), h.forEach((x) => {
+        this.isValidLookup(a) || (l = m, !X[`${h[0]}-${m}`] && this.utils && this.utils.hasLoadedNamespace && !this.utils.hasLoadedNamespace(l) && (X[`${h[0]}-${m}`] = !0, this.logger.warn(`key "${s}" for languages "${h.join(", ")}" won't get resolved as namespace "${l}" was not yet loaded`, "This means something IS WRONG in your setup. You access the t function before i18next.init / i18next.loadNamespace / i18next.changeLanguage was done. Wait for the callback or Promise to resolve before accessing it!!!")), h.forEach((T) => {
           if (this.isValidLookup(a))
             return;
-          i = x;
-          const S = [c];
+          i = T;
+          const v = [c];
           if (this.i18nFormat && this.i18nFormat.addLookupKeys)
-            this.i18nFormat.addLookupKeys(S, c, x, m, t);
+            this.i18nFormat.addLookupKeys(v, c, T, m, t);
           else {
             let y;
-            u && (y = this.pluralResolver.getSuffix(x, t.count, t));
-            const T = `${this.options.pluralSeparator}zero`, A = `${this.options.pluralSeparator}ordinal${this.options.pluralSeparator}`;
-            if (u && (S.push(c + y), t.ordinal && y.indexOf(A) === 0 && S.push(c + y.replace(A, this.options.pluralSeparator)), f && S.push(c + T)), p) {
-              const v = `${c}${this.options.contextSeparator}${t.context}`;
-              S.push(v), u && (S.push(v + y), t.ordinal && y.indexOf(A) === 0 && S.push(v + y.replace(A, this.options.pluralSeparator)), f && S.push(v + T));
+            u && (y = this.pluralResolver.getSuffix(T, t.count, t));
+            const x = `${this.options.pluralSeparator}zero`, O = `${this.options.pluralSeparator}ordinal${this.options.pluralSeparator}`;
+            if (u && (v.push(c + y), t.ordinal && y.indexOf(O) === 0 && v.push(c + y.replace(O, this.options.pluralSeparator)), f && v.push(c + x)), p) {
+              const S = `${c}${this.options.contextSeparator}${t.context}`;
+              v.push(S), u && (v.push(S + y), t.ordinal && y.indexOf(O) === 0 && v.push(S + y.replace(O, this.options.pluralSeparator)), f && v.push(S + x));
             }
           }
           let $;
-          for (; $ = S.pop(); )
-            this.isValidLookup(a) || (r = $, a = this.getResource(x, m, $, t));
+          for (; $ = v.pop(); )
+            this.isValidLookup(a) || (r = $, a = this.getResource(T, m, $, t));
         }));
       });
     }), {
@@ -526,21 +526,21 @@ class U extends K {
     return !1;
   }
 }
-function H(n) {
+function K(n) {
   return n.charAt(0).toUpperCase() + n.slice(1);
 }
 class _ {
   constructor(e) {
-    this.options = e, this.supportedLngs = this.options.supportedLngs || !1, this.logger = w.create("languageUtils");
+    this.options = e, this.supportedLngs = this.options.supportedLngs || !1, this.logger = P.create("languageUtils");
   }
   getScriptPartFromCode(e) {
-    if (e = V(e), !e || e.indexOf("-") < 0)
+    if (e = U(e), !e || e.indexOf("-") < 0)
       return null;
     const t = e.split("-");
     return t.length === 2 || (t.pop(), t[t.length - 1].toLowerCase() === "x") ? null : this.formatLanguageCode(t.join("-"));
   }
   getLanguagePartFromCode(e) {
-    if (e = V(e), !e || e.indexOf("-") < 0)
+    if (e = U(e), !e || e.indexOf("-") < 0)
       return e;
     const t = e.split("-");
     return this.formatLanguageCode(t[0]);
@@ -549,7 +549,7 @@ class _ {
     if (typeof e == "string" && e.indexOf("-") > -1) {
       const t = ["hans", "hant", "latn", "cyrl", "cans", "mong", "arab"];
       let a = e.split("-");
-      return this.options.lowerCaseLng ? a = a.map((s) => s.toLowerCase()) : a.length === 2 ? (a[0] = a[0].toLowerCase(), a[1] = a[1].toUpperCase(), t.indexOf(a[1].toLowerCase()) > -1 && (a[1] = H(a[1].toLowerCase()))) : a.length === 3 && (a[0] = a[0].toLowerCase(), a[1].length === 2 && (a[1] = a[1].toUpperCase()), a[0] !== "sgn" && a[2].length === 2 && (a[2] = a[2].toUpperCase()), t.indexOf(a[1].toLowerCase()) > -1 && (a[1] = H(a[1].toLowerCase())), t.indexOf(a[2].toLowerCase()) > -1 && (a[2] = H(a[2].toLowerCase()))), a.join("-");
+      return this.options.lowerCaseLng ? a = a.map((s) => s.toLowerCase()) : a.length === 2 ? (a[0] = a[0].toLowerCase(), a[1] = a[1].toUpperCase(), t.indexOf(a[1].toLowerCase()) > -1 && (a[1] = K(a[1].toLowerCase()))) : a.length === 3 && (a[0] = a[0].toLowerCase(), a[1].length === 2 && (a[1] = a[1].toUpperCase()), a[0] !== "sgn" && a[2].length === 2 && (a[2] = a[2].toUpperCase()), t.indexOf(a[1].toLowerCase()) > -1 && (a[1] = K(a[1].toLowerCase())), t.indexOf(a[2].toLowerCase()) > -1 && (a[2] = K(a[2].toLowerCase()))), a.join("-");
     }
     return this.options.cleanCode || this.options.lowerCaseLng ? e.toLowerCase() : e;
   }
@@ -758,7 +758,7 @@ let me = [{
     return n == 1 ? 0 : n == 2 ? 1 : (n < 0 || n > 10) && n % 10 == 0 ? 2 : 3;
   }
 };
-const be = ["v1", "v2", "v3"], Se = ["v4"], ee = {
+const be = ["v1", "v2", "v3"], ve = ["v4"], ee = {
   zero: 0,
   one: 1,
   two: 2,
@@ -766,7 +766,7 @@ const be = ["v1", "v2", "v3"], Se = ["v4"], ee = {
   many: 4,
   other: 5
 };
-function ve() {
+function Se() {
   const n = {};
   return me.forEach((e) => {
     e.lngs.forEach((t) => {
@@ -777,10 +777,10 @@ function ve() {
     });
   }), n;
 }
-class xe {
+class Te {
   constructor(e) {
     let t = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
-    this.languageUtils = e, this.options = t, this.logger = w.create("pluralResolver"), (!this.options.compatibilityJSON || Se.includes(this.options.compatibilityJSON)) && (typeof Intl > "u" || !Intl.PluralRules) && (this.options.compatibilityJSON = "v3", this.logger.error("Your environment seems not to be Intl API compatible, use an Intl.PluralRules polyfill. Will fallback to the compatibilityJSON v3 format handling.")), this.rules = ve();
+    this.languageUtils = e, this.options = t, this.logger = P.create("pluralResolver"), (!this.options.compatibilityJSON || ve.includes(this.options.compatibilityJSON)) && (typeof Intl > "u" || !Intl.PluralRules) && (this.options.compatibilityJSON = "v3", this.logger.error("Your environment seems not to be Intl API compatible, use an Intl.PluralRules polyfill. Will fallback to the compatibilityJSON v3 format handling.")), this.rules = Se();
   }
   addRule(e, t) {
     this.rules[e] = t;
@@ -789,7 +789,7 @@ class xe {
     let t = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
     if (this.shouldUseIntlApi())
       try {
-        return new Intl.PluralRules(V(e), {
+        return new Intl.PluralRules(U(e), {
           type: t.ordinal ? "ordinal" : "cardinal"
         });
       } catch {
@@ -831,10 +831,10 @@ function te(n, e, t) {
   let a = arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : ".", s = arguments.length > 4 && arguments[4] !== void 0 ? arguments[4] : !0, r = ce(n, e, t);
   return !r && s && typeof t == "string" && (r = M(n, t, a), r === void 0 && (r = M(e, t, a))), r;
 }
-class Te {
+class xe {
   constructor() {
     let e = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {};
-    this.logger = w.create("interpolator"), this.options = e, this.format = e.interpolation && e.interpolation.format || ((t) => t), this.init(e);
+    this.logger = P.create("interpolator"), this.options = e, this.format = e.interpolation && e.interpolation.format || ((t) => t), this.init(e);
   }
   init() {
     let e = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {};
@@ -863,15 +863,15 @@ class Te {
     }
     const c = (p) => {
       if (p.indexOf(this.formatSeparator) < 0) {
-        const S = te(t, o, p, this.options.keySeparator, this.options.ignoreJSONStructure);
-        return this.alwaysFormat ? this.format(S, void 0, a, {
+        const v = te(t, o, p, this.options.keySeparator, this.options.ignoreJSONStructure);
+        return this.alwaysFormat ? this.format(v, void 0, a, {
           ...s,
           ...t,
           interpolationkey: p
-        }) : S;
+        }) : v;
       }
-      const h = p.split(this.formatSeparator), m = h.shift().trim(), x = h.join(this.formatSeparator).trim();
-      return this.format(te(t, o, m, this.options.keySeparator, this.options.ignoreJSONStructure), x, a, {
+      const h = p.split(this.formatSeparator), m = h.shift().trim(), T = h.join(this.formatSeparator).trim();
+      return this.format(te(t, o, m, this.options.keySeparator, this.options.ignoreJSONStructure), T, a, {
         ...s,
         ...t,
         interpolationkey: m
@@ -890,8 +890,8 @@ class Te {
         const h = r[1].trim();
         if (i = c(h), i === void 0)
           if (typeof g == "function") {
-            const x = g(e, r, s);
-            i = typeof x == "string" ? x : "";
+            const T = g(e, r, s);
+            i = typeof T == "string" ? T : "";
           } else if (s && Object.prototype.hasOwnProperty.call(s, h))
             i = "";
           else if (u) {
@@ -948,7 +948,7 @@ class Te {
     return e;
   }
 }
-function Oe(n) {
+function Ae(n) {
   let e = n.toLowerCase().trim();
   const t = {};
   if (n.indexOf("(") > -1) {
@@ -967,44 +967,44 @@ function Oe(n) {
     formatOptions: t
   };
 }
-function k(n) {
+function L(n) {
   const e = {};
   return function(a, s, r) {
     const i = s + JSON.stringify(r);
     let l = e[i];
-    return l || (l = n(V(s), r), e[i] = l), l(a);
+    return l || (l = n(U(s), r), e[i] = l), l(a);
   };
 }
-class Ae {
+class Oe {
   constructor() {
     let e = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {};
-    this.logger = w.create("formatter"), this.options = e, this.formats = {
-      number: k((t, a) => {
+    this.logger = P.create("formatter"), this.options = e, this.formats = {
+      number: L((t, a) => {
         const s = new Intl.NumberFormat(t, {
           ...a
         });
         return (r) => s.format(r);
       }),
-      currency: k((t, a) => {
+      currency: L((t, a) => {
         const s = new Intl.NumberFormat(t, {
           ...a,
           style: "currency"
         });
         return (r) => s.format(r);
       }),
-      datetime: k((t, a) => {
+      datetime: L((t, a) => {
         const s = new Intl.DateTimeFormat(t, {
           ...a
         });
         return (r) => s.format(r);
       }),
-      relativetime: k((t, a) => {
+      relativetime: L((t, a) => {
         const s = new Intl.RelativeTimeFormat(t, {
           ...a
         });
         return (r) => s.format(r, a.range || "day");
       }),
-      list: k((t, a) => {
+      list: L((t, a) => {
         const s = new Intl.ListFormat(t, {
           ...a
         });
@@ -1022,7 +1022,7 @@ class Ae {
     this.formats[e.toLowerCase().trim()] = t;
   }
   addCached(e, t) {
-    this.formats[e.toLowerCase().trim()] = k(t);
+    this.formats[e.toLowerCase().trim()] = L(t);
   }
   format(e, t, a) {
     let s = arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : {};
@@ -1030,7 +1030,7 @@ class Ae {
       const {
         formatName: d,
         formatOptions: c
-      } = Oe(o);
+      } = Ae(o);
       if (this.formats[d]) {
         let g = l;
         try {
@@ -1050,13 +1050,13 @@ class Ae {
     }, e);
   }
 }
-function we(n, e) {
+function Pe(n, e) {
   n.pending[e] !== void 0 && (delete n.pending[e], n.pendingCount--);
 }
-class Le extends K {
+class we extends H {
   constructor(e, t, a) {
     let s = arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : {};
-    super(), this.backend = e, this.store = t, this.services = a, this.languageUtils = a.languageUtils, this.options = s, this.logger = w.create("backendConnector"), this.waitingReads = [], this.maxParallelReads = s.maxParallelReads || 10, this.readingCalls = 0, this.maxRetries = s.maxRetries >= 0 ? s.maxRetries : 5, this.retryTimeout = s.retryTimeout >= 1 ? s.retryTimeout : 350, this.state = {}, this.queue = [], this.backend && this.backend.init && this.backend.init(a, s.backend, s);
+    super(), this.backend = e, this.store = t, this.services = a, this.languageUtils = a.languageUtils, this.options = s, this.logger = P.create("backendConnector"), this.waitingReads = [], this.maxParallelReads = s.maxParallelReads || 10, this.readingCalls = 0, this.maxRetries = s.maxRetries >= 0 ? s.maxRetries : 5, this.retryTimeout = s.retryTimeout >= 1 ? s.retryTimeout : 350, this.state = {}, this.queue = [], this.backend && this.backend.init && this.backend.init(a, s.backend, s);
   }
   queueLoad(e, t, a, s) {
     const r = {}, i = {}, l = {}, o = {};
@@ -1084,7 +1084,7 @@ class Le extends K {
     t && this.emit("failedLoading", r, i, t), a && this.store.addResourceBundle(r, i, a), this.state[e] = t ? -1 : 2;
     const l = {};
     this.queue.forEach((o) => {
-      de(o.loaded, [r], i), we(o, e), t && o.errors.push(t), o.pendingCount === 0 && !o.done && (Object.keys(o.loaded).forEach((d) => {
+      de(o.loaded, [r], i), Pe(o, e), t && o.errors.push(t), o.pendingCount === 0 && !o.done && (Object.keys(o.loaded).forEach((d) => {
         l[d] || (l[d] = {});
         const c = o.loaded[d];
         c.length && c.forEach((g) => {
@@ -1256,10 +1256,10 @@ function Ne(n) {
     typeof n[t] == "function" && (n[t] = n[t].bind(n));
   });
 }
-class I extends K {
+class I extends H {
   constructor() {
     let e = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {}, t = arguments.length > 1 ? arguments[1] : void 0;
-    if (super(), this.options = se(e), this.services = {}, this.logger = w, this.modules = {
+    if (super(), this.options = se(e), this.services = {}, this.logger = P, this.modules = {
       external: []
     }, Ne(this), t && !this.isInitialized && !e.isClone) {
       if (!this.options.initImmediate)
@@ -1286,23 +1286,23 @@ class I extends K {
       return c ? typeof c == "function" ? new c() : c : null;
     }
     if (!this.options.isClone) {
-      this.modules.logger ? w.init(r(this.modules.logger), this.options) : w.init(null, this.options);
+      this.modules.logger ? P.init(r(this.modules.logger), this.options) : P.init(null, this.options);
       let c;
-      this.modules.formatter ? c = this.modules.formatter : typeof Intl < "u" && (c = Ae);
+      this.modules.formatter ? c = this.modules.formatter : typeof Intl < "u" && (c = Oe);
       const g = new _(this.options);
       this.store = new Z(this.options.resources, this.options);
       const u = this.services;
-      u.logger = w, u.resourceStore = this.store, u.languageUtils = g, u.pluralResolver = new xe(g, {
+      u.logger = P, u.resourceStore = this.store, u.languageUtils = g, u.pluralResolver = new Te(g, {
         prepend: this.options.pluralSeparator,
         compatibilityJSON: this.options.compatibilityJSON,
         simplifyPluralSuffix: this.options.simplifyPluralSuffix
-      }), c && (!this.options.interpolation.format || this.options.interpolation.format === s.interpolation.format) && (u.formatter = r(c), u.formatter.init(u, this.options), this.options.interpolation.format = u.formatter.format.bind(u.formatter)), u.interpolator = new Te(this.options), u.utils = {
+      }), c && (!this.options.interpolation.format || this.options.interpolation.format === s.interpolation.format) && (u.formatter = r(c), u.formatter.init(u, this.options), this.options.interpolation.format = u.formatter.format.bind(u.formatter)), u.interpolator = new xe(this.options), u.utils = {
         hasLoadedNamespace: this.hasLoadedNamespace.bind(this)
-      }, u.backendConnector = new Le(r(this.modules.backend), u.resourceStore, u, this.options), u.backendConnector.on("*", function(f) {
+      }, u.backendConnector = new we(r(this.modules.backend), u.resourceStore, u, this.options), u.backendConnector.on("*", function(f) {
         for (var p = arguments.length, h = new Array(p > 1 ? p - 1 : 0), m = 1; m < p; m++)
           h[m - 1] = arguments[m];
         e.emit(f, ...h);
-      }), this.modules.languageDetector && (u.languageDetector = r(this.modules.languageDetector), u.languageDetector.init && u.languageDetector.init(u, this.options.detection, this.options)), this.modules.i18nFormat && (u.i18nFormat = r(this.modules.i18nFormat), u.i18nFormat.init && u.i18nFormat.init(this)), this.translator = new U(this.services, this.options), this.translator.on("*", function(f) {
+      }), this.modules.languageDetector && (u.languageDetector = r(this.modules.languageDetector), u.languageDetector.init && u.languageDetector.init(u, this.options.detection, this.options)), this.modules.i18nFormat && (u.i18nFormat = r(this.modules.i18nFormat), u.i18nFormat.init && u.i18nFormat.init(this)), this.translator = new V(this.services, this.options), this.translator.on("*", function(f) {
         for (var p = arguments.length, h = new Array(p > 1 ? p - 1 : 0), m = 1; m < p; m++)
           h[m - 1] = arguments[m];
         e.emit(f, ...h);
@@ -1486,7 +1486,7 @@ class I extends K {
       ...this.services
     }, r.services.utils = {
       hasLoadedNamespace: r.hasLoadedNamespace.bind(r)
-    }, a && (r.store = new Z(this.store.data, s), r.services.resourceStore = r.store), r.translator = new U(r.services, s), r.translator.on("*", function(l) {
+    }, a && (r.store = new Z(this.store.data, s), r.services.resourceStore = r.store), r.translator = new V(r.services, s), r.translator.on("*", function(l) {
       for (var o = arguments.length, d = new Array(o > 1 ? o - 1 : 0), c = 1; c < o; c++)
         d[c - 1] = arguments[c];
       r.emit(l, ...d);
@@ -1512,7 +1512,7 @@ b.init;
 b.loadResources;
 b.reloadResources;
 b.use;
-const ke = b.changeLanguage;
+const Le = b.changeLanguage;
 b.getFixedT;
 b.t;
 b.exists;
@@ -1520,13 +1520,16 @@ b.setDefaultNamespace;
 b.hasLoadedNamespace;
 b.loadNamespaces;
 b.loadLanguages;
-const Ie = (n, e) => b.t(n, e), Pe = {
+const Ie = (n, e) => b.t(n, e), Ce = {
   common: {
     ok: "Okay",
     workgroup: "Workgroup",
     "not-found": "Not Found",
+    "accumulated-in-day": "Accumulated in Day",
+    data: "Data",
     settings: "Settings",
     period: "Period",
+    dates: "Dates",
     home: "Home",
     user: "User",
     tenant: "Tenant",
@@ -1713,6 +1716,13 @@ const Ie = (n, e) => b.t(n, e), Pe = {
       timeScale: "Time Scale",
       supervisor: "Supervisor"
     },
+    agents: {
+      firstName: "First Name",
+      lastName: "Last Name",
+      name: "Name",
+      email: "Email",
+      baseUserId: "Base User ID"
+    },
     scales: {
       firstName: "First Name",
       lastName: "Last Name",
@@ -1788,11 +1798,25 @@ const Ie = (n, e) => b.t(n, e), Pe = {
       totalOperationBreakScaledTime: "Total Scaled Break Time",
       breakAdherence: "Break Adherence",
       adherence: "Adherence"
+    },
+    forecast: {
+      hour: "Hour",
+      answereds: "Answereds",
+      attempts: "Attempts",
+      hitRate: "Hit Rate",
+      averageServiceTime: "Average Service Time",
+      contactRightPerson: "Contact Right Person",
+      contactRightPersonRatePerTotal: "Contact Right Person Rate per Total",
+      contactRightPersonRatePerAnswered: "Contact Right Person Rate per Answered",
+      loggedsAgents: "Loggeds Agents"
     }
   }
-}, Ce = {
+}, ke = {
   common: {
     ok: "Aceptar",
+    dates: "Datas",
+    "accumulated-in-day": "Acumulado no dia",
+    data: "Dados",
     workgroup: "Grupo de Trabajo",
     "not-found": "No Encontrado",
     period: "Periodo",
@@ -2058,6 +2082,24 @@ const Ie = (n, e) => b.t(n, e), Pe = {
       totalOperationBreakScaledTime: "Tempo Total de Pausa Escala da Operação",
       breakAdherence: "Pausa em Aderência",
       adherence: "Aderência"
+    },
+    agents: {
+      firstName: "Nome",
+      name: "Nome",
+      lastName: "Sobrenome",
+      email: "Email",
+      baseUserId: "Usuário Base"
+    },
+    forecast: {
+      hour: "Hora",
+      answereds: "Respostas",
+      attempts: "Tentativas",
+      hitRate: "Percentual De Acerto",
+      averageServiceTime: "Tempo médio de Serviço",
+      contactRightPerson: "Contatar Pessoa Certa",
+      contactRightPersonRatePerTotal: "Percentual Total de Contatar Pessoa Certa",
+      contactRightPersonRatePerAnswered: "Percentual por Resposta de Contatar Pessoa Certa",
+      loggedsAgents: "Agentes Logados"
     }
   }
 }, Re = {
@@ -2065,6 +2107,9 @@ const Ie = (n, e) => b.t(n, e), Pe = {
     ok: "Ok",
     workgroup: "Grupo de Trabalho",
     period: "Periodo",
+    dates: "Datas",
+    "accumulated-in-day": "Acumulado no dia",
+    data: "Dados",
     "not-found": "Não Encontrado",
     settings: "Configurações",
     home: "Início",
@@ -2175,7 +2220,7 @@ const Ie = (n, e) => b.t(n, e), Pe = {
     }
   },
   messages: {
-    "not-found": "Nenhum {{item}} foi encontrado",
+    "not-found": "Nenhum(a) {{item}} foi encontrado(a)",
     typing: "Digite o seu {{item}}...",
     success: "{{item}} {{action}} realizado com sucesso",
     failed: "{{item}} {{action}} falhou"
@@ -2245,6 +2290,13 @@ const Ie = (n, e) => b.t(n, e), Pe = {
       email: "E-mail",
       role: "Cargo",
       active: "Ativo"
+    },
+    agents: {
+      firstName: "Nome",
+      name: "Nome",
+      lastName: "Sobrenome",
+      email: "Email",
+      baseUserId: "Usuário Base"
     },
     workgroups: {
       name: "Nome",
@@ -2328,6 +2380,17 @@ const Ie = (n, e) => b.t(n, e), Pe = {
       totalOperationBreakScaledTime: "Tempo Total de Pausa Escala da Operação",
       breakAdherence: "Pausa em Aderência",
       adherence: "Aderência"
+    },
+    forecast: {
+      hour: "Hora",
+      answereds: "Respostas",
+      attempts: "Tentativas",
+      hitRate: "Percentual De Acerto",
+      averageServiceTime: "Tempo médio de Serviço",
+      contactRightPerson: "Contatar Pessoa Certa",
+      contactRightPersonRatePerTotal: "Percentual Total de Contatar Pessoa Certa",
+      contactRightPersonRatePerAnswered: "Percentual por Resposta de Contatar Pessoa Certa",
+      loggedsAgents: "Agentes Logados"
     }
   }
 }, $e = ({ language: n = "en" }) => {
@@ -2335,13 +2398,13 @@ const Ie = (n, e) => b.t(n, e), Pe = {
     lng: n,
     fallbackLng: "en",
     resources: {
-      en: { translation: Pe },
+      en: { translation: Ce },
       "pt-BR": { translation: Re },
-      es: { translation: Ce }
+      es: { translation: ke }
     }
   });
 }, Fe = (n) => {
-  ke(n);
+  Le(n);
 };
 export {
   Fe as changeAppTranslationLanguage,
