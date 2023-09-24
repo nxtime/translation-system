@@ -7,6 +7,7 @@ declare const EnglishTranslation: {
         data: string;
         settings: string;
         period: string;
+        confirm: string;
         dates: string;
         home: string;
         user: string;
@@ -145,6 +146,7 @@ declare const EnglishTranslation: {
     };
     sidebar: {
         general: string;
+        other: string;
         agents: string;
         users: string;
         services: string;
@@ -190,6 +192,7 @@ declare const EnglishTranslation: {
         workgroups: {
             name: string;
             agents: string;
+            weekWorkDays: string;
             workGroups: string;
             timeScale: string;
             supervisor: string;
@@ -232,6 +235,10 @@ declare const EnglishTranslation: {
             absenteeism: string;
             topAdherenceOffenders: string;
             mediumWorkGroupsAdherence: string;
+            totalOperationBreakWorkedTime: string;
+            totalOperationBreakScaledTime: string;
+            totalOperationLoggedTime: string;
+            totalOperationScaledTime: string;
             totalWorkGroupsExtraHours: string;
             mediumWorkGroupsBreaksTimes: string;
             mediumWorkGroupsLoggedTimes: string;
@@ -276,6 +283,28 @@ declare const EnglishTranslation: {
             totalOperationBreakScaledTime: string;
             breakAdherence: string;
             adherence: string;
+        };
+        "workgroup-adherence": {
+            date: string;
+            totalAgents: string;
+            averageServiceTime: string;
+            occupancyRate: string;
+            productivityRate: string;
+            availabilityFee: string;
+            averageTimeLoggedIn: string;
+            averageTimeSpoken: string;
+            averageIdleTime: string;
+            averageRestBreak: string;
+            mediumBreakSnackOrLunch: string;
+            averageTrainingBreak: string;
+            averageFeedbackBreak: string;
+            answereds: string;
+            contactRightPerson: string;
+            notContactRightPerson: string;
+            errands: string;
+            errandsPerContactRightPerson: string;
+            contactRightPersonPerAnswereds: string;
+            percentageIdleTime: string;
         };
         forecast: {
             hour: string;

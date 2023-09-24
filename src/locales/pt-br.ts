@@ -3,6 +3,7 @@ import { TTranslation } from "./en";
 const PortugueseTranslation: TTranslation = {
   common: {
     ok: "Ok",
+    confirm: "Confirmar",
     workgroup: "Grupo de Trabalho",
     period: "Periodo",
     dates: "Datas",
@@ -148,6 +149,7 @@ const PortugueseTranslation: TTranslation = {
   sidebar: {
     general: "Geral",
     agents: "Agentes",
+    other: "Outro",
     users: "Usuários",
     services: "Serviços",
     calls: "Chamadas",
@@ -198,6 +200,7 @@ const PortugueseTranslation: TTranslation = {
     },
     workgroups: {
       name: "Nome",
+      weekWorkDays: "Dias da Semana",
       agents: "Agentes",
       workGroups: "Grupos de Trabalho",
       timeScale: "Escala de Tempo",
@@ -233,6 +236,10 @@ const PortugueseTranslation: TTranslation = {
     charts: {
       absenteeism: "Absenteísmo",
       topAdherenceOffenders: "Principais Infratores de Adesão",
+      totalOperationBreakWorkedTime: "Total de Pausa Trabalhada da Operação",
+      totalOperationLoggedTime: "Total de Tempo Logado da Operação",
+      totalOperationScaledTime: "Total de Tempo Escala da Operação",
+      totalOperationBreakScaledTime: "Total de Pausa Escalada da Operação",
       mediumWorkGroupsAdherence: "Adesão Média dos Grupos de Trabalho",
       totalWorkGroupsExtraHours: "Total de Horas Extras dos Grupos de Trabalho",
       mediumWorkGroupsBreaksTimes:
@@ -282,6 +289,29 @@ const PortugueseTranslation: TTranslation = {
       totalOperationBreakScaledTime: "Tempo Total de Pausa Escala da Operação",
       breakAdherence: "Pausa em Aderência",
       adherence: "Aderência",
+    },
+    "workgroup-adherence": {
+      date: "Data",
+      totalAgents: "Total de Agentes",
+      averageServiceTime: "Tempo Médio de Serviço",
+      occupancyRate: "Taxa de Ocupação",
+      productivityRate: "Taxa de Produtividade",
+      availabilityFee: "Taxa de Disponibilidade",
+      averageTimeLoggedIn: "Tempo Médio Logado",
+      averageTimeSpoken: "Tempo Médio Falado",
+      averageIdleTime: "Tempo Médio de Inatividade",
+      averageRestBreak: "Tempo Médio de Descanso",
+      mediumBreakSnackOrLunch: "Intervalo Médio (Lanche ou Almoço)",
+      averageTrainingBreak: "Intervalo Médio de Treinamento",
+      averageFeedbackBreak: "Intervalo Médio de Feedback",
+      answereds: "Atendimentos",
+      contactRightPerson: "Contato com a Pessoa Certa",
+      notContactRightPerson: "Não Contato com a Pessoa Certa",
+      errands: "Tarefas",
+      errandsPerContactRightPerson: "Tarefas por Contato com a Pessoa Certa",
+      contactRightPersonPerAnswereds:
+        "Contato com a Pessoa Certa por Atendimentos",
+      percentageIdleTime: "Percentual de Tempo Inativo",
     },
     forecast: {
       hour: "Hora",
