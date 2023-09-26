@@ -12,6 +12,10 @@ declare const EnglishTranslation: {
         home: string;
         user: string;
         tenant: string;
+        "select-all": string;
+        "disposition-with": string;
+        "disposition-without": string;
+        "disposition-groups": string;
         "remember-me": string;
         admin: string;
         calls: string;
