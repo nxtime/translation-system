@@ -13,6 +13,7 @@ const PortugueseTranslation: TTranslation = {
     settings: "Configurações",
     home: "Início",
     user: "Usuário",
+    none: "Nenhum",
     "select-all": "Selecionar Tudo",
     "disposition-with": "Grupos com Disposição",
     "disposition-without": "Grupos sem Disposição",

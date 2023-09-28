@@ -10,6 +10,7 @@ declare const EnglishTranslation: {
         confirm: string;
         dates: string;
         home: string;
+        none: string;
         user: string;
         tenant: string;
         "select-all": string;

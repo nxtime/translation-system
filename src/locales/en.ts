@@ -10,6 +10,7 @@ const EnglishTranslation = {
     confirm: "Confirm",
     dates: "Dates",
     home: "Home",
+    none: "None",
     user: "User",
     tenant: "Tenant",
     "select-all": "Select all",

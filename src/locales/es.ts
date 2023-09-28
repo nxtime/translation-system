@@ -14,6 +14,7 @@ const SpanishTranslation: TTranslation = {
     "select-all": "Selecionar Tudo",
     "disposition-with": "Grupos com Disposição",
     "disposition-without": "Grupos sem Disposição",
+    none: "Nenhum",
     "disposition-groups": "Grupos de Disposições",
     home: "Inicio",
     user: "Usuario",
