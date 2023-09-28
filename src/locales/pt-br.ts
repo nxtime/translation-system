@@ -162,6 +162,7 @@ const PortugueseTranslation: TTranslation = {
     dashboard: "Painel",
     adherence: "Aderência",
     "real-time": "Tempo Real",
+    "disposition-groups": "Grupos de Disposição",
     workgroups: "Grupos de Trabalho",
     staffing: "Alocação de Pessoal",
     home: "Início",

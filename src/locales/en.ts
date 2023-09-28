@@ -154,6 +154,7 @@ const EnglishTranslation = {
     other: "Other",
     agents: "Agents",
     users: "Users",
+    "disposition-groups": "Disposition Groups",
     services: "Services",
     calls: "Calls",
     "contact-right-person": "Contact Right Person",

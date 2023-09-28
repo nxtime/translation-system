@@ -154,6 +154,7 @@ declare const EnglishTranslation: {
         other: string;
         agents: string;
         users: string;
+        "disposition-groups": string;
         services: string;
         calls: string;
         "contact-right-person": string;

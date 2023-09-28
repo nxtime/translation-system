@@ -158,6 +158,7 @@ const SpanishTranslation: TTranslation = {
     other: "Otro",
     services: "Servicios",
     calls: "Llamadas",
+    "disposition-groups": "Grupos de Disposição",
     "contact-right-person": "Contactar a la Persona Correcta",
     dashboard: "Tablero",
     adherence: "Adhesión",
