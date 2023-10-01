@@ -2,6 +2,9 @@ const EnglishTranslation = {
   common: {
     ok: "Okay",
     workgroup: "Workgroup",
+    certificates: "Attesteds",
+    certificate: "Attested",
+    image: "Image",
     "not-found": "Not Found",
     "accumulated-in-day": "Accumulated in Day",
     data: "Data",

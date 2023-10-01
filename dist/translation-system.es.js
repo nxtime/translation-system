@@ -164,7 +164,7 @@ function pe(r) {
   return typeof r == "string" ? r.replace(/[&<>"'\/]/g, (e) => ge[e]) : r;
 }
 const fe = [" ", ",", "?", "!", ";"];
-function he(r, e, t) {
+function me(r, e, t) {
   e = e || "", t = t || "";
   const a = fe.filter((i) => e.indexOf(i) < 0 && t.indexOf(i) < 0);
   if (a.length === 0)
@@ -320,7 +320,7 @@ class V extends W {
     a === void 0 && (a = ":");
     const s = t.keySeparator !== void 0 ? t.keySeparator : this.options.keySeparator;
     let n = t.ns || this.options.defaultNS || [];
-    const i = a && e.indexOf(a) > -1, l = !this.options.userDefinedKeySeparator && !t.keySeparator && !this.options.userDefinedNsSeparator && !t.nsSeparator && !he(e, a, s);
+    const i = a && e.indexOf(a) > -1, l = !this.options.userDefinedKeySeparator && !t.keySeparator && !this.options.userDefinedNsSeparator && !t.nsSeparator && !me(e, a, s);
     if (i && !l) {
       const o = e.match(this.interpolator.nestingRegexp);
       if (o && o.length > 0)
@@ -367,8 +367,8 @@ class V extends W {
     }
     const g = this.resolve(e, t);
     let u = g && g.res;
-    const f = g && g.usedKey || i, p = g && g.exactUsedKey || i, h = Object.prototype.toString.apply(u), m = ["[object Number]", "[object Function]", "[object RegExp]"], S = t.joinArrays !== void 0 ? t.joinArrays : this.options.joinArrays, T = !this.i18nFormat || this.i18nFormat.handleAsObject;
-    if (T && u && (typeof u != "string" && typeof u != "boolean" && typeof u != "number") && m.indexOf(h) < 0 && !(typeof S == "string" && h === "[object Array]")) {
+    const f = g && g.usedKey || i, p = g && g.exactUsedKey || i, m = Object.prototype.toString.apply(u), h = ["[object Number]", "[object Function]", "[object RegExp]"], S = t.joinArrays !== void 0 ? t.joinArrays : this.options.joinArrays, T = !this.i18nFormat || this.i18nFormat.handleAsObject;
+    if (T && u && (typeof u != "string" && typeof u != "boolean" && typeof u != "number") && h.indexOf(m) < 0 && !(typeof S == "string" && m === "[object Array]")) {
       if (!t.returnObjects && !this.options.returnObjects) {
         this.options.returnedObjectHandler || this.logger.warn("accessing an object - but returnObjects options is not enabled!");
         const y = this.options.returnedObjectHandler ? this.options.returnedObjectHandler(f, u, {
@@ -378,7 +378,7 @@ class V extends W {
         return s ? (g.res = y, g) : y;
       }
       if (n) {
-        const y = h === "[object Array]", P = y ? [] : {}, O = y ? p : f;
+        const y = m === "[object Array]", P = y ? [] : {}, O = y ? p : f;
         for (const v in u)
           if (Object.prototype.hasOwnProperty.call(u, v)) {
             const F = `${O}${n}${v}`;
@@ -390,7 +390,7 @@ class V extends W {
           }
         u = P;
       }
-    } else if (T && typeof S == "string" && h === "[object Array]")
+    } else if (T && typeof S == "string" && m === "[object Array]")
       u = u.join(S), u && (u = this.extendTranslation(u, e, t, a));
     else {
       let y = !1, P = !1;
@@ -480,15 +480,15 @@ class V extends W {
       s = c;
       let g = d.namespaces;
       this.options.fallbackNS && (g = g.concat(this.options.fallbackNS));
-      const u = t.count !== void 0 && typeof t.count != "string", f = u && !t.ordinal && t.count === 0 && this.pluralResolver.shouldUseIntlApi(), p = t.context !== void 0 && (typeof t.context == "string" || typeof t.context == "number") && t.context !== "", h = t.lngs ? t.lngs : this.languageUtils.toResolveHierarchy(t.lng || this.language, t.fallbackLng);
-      g.forEach((m) => {
-        this.isValidLookup(a) || (l = m, !X[`${h[0]}-${m}`] && this.utils && this.utils.hasLoadedNamespace && !this.utils.hasLoadedNamespace(l) && (X[`${h[0]}-${m}`] = !0, this.logger.warn(`key "${s}" for languages "${h.join(", ")}" won't get resolved as namespace "${l}" was not yet loaded`, "This means something IS WRONG in your setup. You access the t function before i18next.init / i18next.loadNamespace / i18next.changeLanguage was done. Wait for the callback or Promise to resolve before accessing it!!!")), h.forEach((S) => {
+      const u = t.count !== void 0 && typeof t.count != "string", f = u && !t.ordinal && t.count === 0 && this.pluralResolver.shouldUseIntlApi(), p = t.context !== void 0 && (typeof t.context == "string" || typeof t.context == "number") && t.context !== "", m = t.lngs ? t.lngs : this.languageUtils.toResolveHierarchy(t.lng || this.language, t.fallbackLng);
+      g.forEach((h) => {
+        this.isValidLookup(a) || (l = h, !X[`${m[0]}-${h}`] && this.utils && this.utils.hasLoadedNamespace && !this.utils.hasLoadedNamespace(l) && (X[`${m[0]}-${h}`] = !0, this.logger.warn(`key "${s}" for languages "${m.join(", ")}" won't get resolved as namespace "${l}" was not yet loaded`, "This means something IS WRONG in your setup. You access the t function before i18next.init / i18next.loadNamespace / i18next.changeLanguage was done. Wait for the callback or Promise to resolve before accessing it!!!")), m.forEach((S) => {
           if (this.isValidLookup(a))
             return;
           i = S;
           const T = [c];
           if (this.i18nFormat && this.i18nFormat.addLookupKeys)
-            this.i18nFormat.addLookupKeys(T, c, S, m, t);
+            this.i18nFormat.addLookupKeys(T, c, S, h, t);
           else {
             let y;
             u && (y = this.pluralResolver.getSuffix(S, t.count, t));
@@ -500,7 +500,7 @@ class V extends W {
           }
           let D;
           for (; D = T.pop(); )
-            this.isValidLookup(a) || (n = D, a = this.getResource(S, m, D, t));
+            this.isValidLookup(a) || (n = D, a = this.getResource(S, h, D, t));
         }));
       });
     }), {
@@ -598,7 +598,7 @@ class _ {
     }), s;
   }
 }
-let me = [{
+let he = [{
   lngs: ["ach", "ak", "am", "arn", "br", "fil", "gun", "ln", "mfe", "mg", "mi", "oc", "pt", "pt-BR", "tg", "tl", "ti", "tr", "uz", "wa"],
   nr: [1, 2],
   fc: 1
@@ -768,7 +768,7 @@ const be = ["v1", "v2", "v3"], Te = ["v4"], ee = {
 };
 function ve() {
   const r = {};
-  return me.forEach((e) => {
+  return he.forEach((e) => {
     e.lngs.forEach((t) => {
       r[t] = {
         numbers: e.nr,
@@ -870,11 +870,11 @@ class Pe {
           interpolationkey: p
         }) : T;
       }
-      const h = p.split(this.formatSeparator), m = h.shift().trim(), S = h.join(this.formatSeparator).trim();
-      return this.format(te(t, o, m, this.options.keySeparator, this.options.ignoreJSONStructure), S, a, {
+      const m = p.split(this.formatSeparator), h = m.shift().trim(), S = m.join(this.formatSeparator).trim();
+      return this.format(te(t, o, h, this.options.keySeparator, this.options.ignoreJSONStructure), S, a, {
         ...s,
         ...t,
-        interpolationkey: m
+        interpolationkey: h
       });
     };
     this.resetRegExp();
@@ -887,22 +887,22 @@ class Pe {
       safeValue: (p) => this.escapeValue ? d(this.escape(p)) : d(p)
     }].forEach((p) => {
       for (l = 0; n = p.regex.exec(e); ) {
-        const h = n[1].trim();
-        if (i = c(h), i === void 0)
+        const m = n[1].trim();
+        if (i = c(m), i === void 0)
           if (typeof g == "function") {
             const S = g(e, n, s);
             i = typeof S == "string" ? S : "";
-          } else if (s && Object.prototype.hasOwnProperty.call(s, h))
+          } else if (s && Object.prototype.hasOwnProperty.call(s, m))
             i = "";
           else if (u) {
             i = n[0];
             continue;
           } else
-            this.logger.warn(`missed to pass in variable ${h} for interpolating ${e}`), i = "";
+            this.logger.warn(`missed to pass in variable ${m} for interpolating ${e}`), i = "";
         else
           typeof i != "string" && !this.useRawValueToEscape && (i = Q(i));
-        const m = p.safeValue(i);
-        if (e = e.replace(n[0], m), u ? (p.regex.lastIndex += i.length, p.regex.lastIndex -= n[0].length) : p.regex.lastIndex = 0, l++, l >= this.maxReplaces)
+        const h = p.safeValue(i);
+        if (e = e.replace(n[0], h), u ? (p.regex.lastIndex += i.length, p.regex.lastIndex -= n[0].length) : p.regex.lastIndex = 0, l++, l >= this.maxReplaces)
           break;
       }
     }), e;
@@ -923,8 +923,8 @@ class Pe {
           ...d,
           ...i
         });
-      } catch (h) {
-        return this.logger.warn(`failed parsing options string in nesting for key ${o}`, h), `${o}${c}${u}`;
+      } catch (m) {
+        return this.logger.warn(`failed parsing options string in nesting for key ${o}`, m), `${o}${c}${u}`;
       }
       return delete i.defaultValue, o;
     }
@@ -1299,13 +1299,13 @@ class I extends W {
       }), c && (!this.options.interpolation.format || this.options.interpolation.format === s.interpolation.format) && (u.formatter = n(c), u.formatter.init(u, this.options), this.options.interpolation.format = u.formatter.format.bind(u.formatter)), u.interpolator = new Pe(this.options), u.utils = {
         hasLoadedNamespace: this.hasLoadedNamespace.bind(this)
       }, u.backendConnector = new ke(n(this.modules.backend), u.resourceStore, u, this.options), u.backendConnector.on("*", function(f) {
-        for (var p = arguments.length, h = new Array(p > 1 ? p - 1 : 0), m = 1; m < p; m++)
-          h[m - 1] = arguments[m];
-        e.emit(f, ...h);
+        for (var p = arguments.length, m = new Array(p > 1 ? p - 1 : 0), h = 1; h < p; h++)
+          m[h - 1] = arguments[h];
+        e.emit(f, ...m);
       }), this.modules.languageDetector && (u.languageDetector = n(this.modules.languageDetector), u.languageDetector.init && u.languageDetector.init(u, this.options.detection, this.options)), this.modules.i18nFormat && (u.i18nFormat = n(this.modules.i18nFormat), u.i18nFormat.init && u.i18nFormat.init(this)), this.translator = new V(this.services, this.options), this.translator.on("*", function(f) {
-        for (var p = arguments.length, h = new Array(p > 1 ? p - 1 : 0), m = 1; m < p; m++)
-          h[m - 1] = arguments[m];
-        e.emit(f, ...h);
+        for (var p = arguments.length, m = new Array(p > 1 ? p - 1 : 0), h = 1; h < p; h++)
+          m[h - 1] = arguments[h];
+        e.emit(f, ...m);
       }), this.modules.external.forEach((f) => {
         f.init && f.init(this);
       });
@@ -1524,6 +1524,9 @@ const Ie = (r, e) => b.t(r, e), Le = {
   common: {
     ok: "Okay",
     workgroup: "Workgroup",
+    certificates: "Attesteds",
+    certificate: "Attested",
+    image: "Image",
     "not-found": "Not Found",
     "accumulated-in-day": "Accumulated in Day",
     data: "Data",
@@ -1852,6 +1855,9 @@ const Ie = (r, e) => b.t(r, e), Le = {
     confirm: "Confirm",
     dates: "Datas",
     "accumulated-in-day": "Acumulado no dia",
+    certificates: "Atestados",
+    certificate: "Atestado",
+    image: "Imagem",
     data: "Dados",
     workgroup: "Grupo de Trabajo",
     "not-found": "No Encontrado",
@@ -2178,6 +2184,9 @@ const Ie = (r, e) => b.t(r, e), Le = {
     confirm: "Confirmar",
     workgroup: "Grupo de Trabalho",
     period: "Periodo",
+    certificates: "Atestados",
+    certificate: "Atestado",
+    image: "Imagem",
     dates: "Datas",
     "accumulated-in-day": "Acumulado no dia",
     data: "Dados",

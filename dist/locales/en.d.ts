@@ -2,6 +2,9 @@ declare const EnglishTranslation: {
     common: {
         ok: string;
         workgroup: string;
+        certificates: string;
+        certificate: string;
+        image: string;
         "not-found": string;
         "accumulated-in-day": string;
         data: string;
