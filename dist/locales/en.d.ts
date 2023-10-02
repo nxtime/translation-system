@@ -155,6 +155,7 @@ declare const EnglishTranslation: {
     sidebar: {
         general: string;
         other: string;
+        certificate: string;
         agents: string;
         users: string;
         "disposition-groups": string;
@@ -229,8 +230,11 @@ declare const EnglishTranslation: {
             hour: string;
             answereds: string;
             contact_right_person: string;
+            contactRightPerson: string;
             loggeds_agents: string;
+            loggedsAgents: string;
             average_service_time: string;
+            averageServiceTime: string;
             occupancyRate: string;
             productivityRate: string;
             availabilityFee: string;
