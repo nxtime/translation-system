@@ -217,6 +217,10 @@ const EnglishTranslation = {
     scales: {
       firstName: "First Name",
       lastName: "Last Name",
+      login: "Login",
+      logout: "Logout",
+      breaks: "Breaks",
+      extraHours: "Extra Hours",
       baseUserId: "Base User ID",
     },
     scalesgroups: {
@@ -228,6 +232,7 @@ const EnglishTranslation = {
     services: {
       attempts: "Attempts",
       hour: "Hour",
+      date: "Data",
       answereds: "Answereds",
       contact_right_person: "Contact Right Person",
       contactRightPerson: "Contact Right Person",
@@ -245,7 +250,10 @@ const EnglishTranslation = {
       hitRate: "Hit Rate",
     },
     charts: {
+      adherence: "Adherence",
+      name: "Name",
       absenteeism: "Absenteeism",
+      totalExtraHours: "Total Extra Hours",
       topAdherenceOffenders: "Top Adherence Offenders",
       mediumWorkGroupsAdherence: "Medium WorkGroups Adherence",
       totalOperationBreakWorkedTime: "Total Operation Break Worked Time",

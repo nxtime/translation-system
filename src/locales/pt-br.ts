@@ -219,6 +219,10 @@ const PortugueseTranslation: TTranslation = {
     scales: {
       firstName: "Primeiro Nome",
       lastName: "Sobrenome",
+      login: "Início",
+      logout: "Fim",
+      breaks: "Pausas",
+      extraHours: "Horas Extras",
       baseUserId: "ID do Usuário Base",
     },
     scalesgroups: {
@@ -229,6 +233,7 @@ const PortugueseTranslation: TTranslation = {
     },
     services: {
       attempts: "Tentativas",
+      date: "Data",
       hour: "Hora",
       answereds: "Atendidas",
       contact_right_person: "Contatar a Pessoa Certa",
@@ -247,7 +252,10 @@ const PortugueseTranslation: TTranslation = {
       hitRate: "Taxa de Acerto",
     },
     charts: {
+      adherence: "Aderência",
+      name: "Nome",
       absenteeism: "Absenteísmo",
+      totalExtraHours: "Total de Horas Extras",
       topAdherenceOffenders: "Principais Infratores de Adesão",
       totalOperationBreakWorkedTime: "Total de Pausa Trabalhada da Operação",
       totalOperationLoggedTime: "Total de Tempo Logado da Operação",

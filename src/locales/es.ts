@@ -211,6 +211,10 @@ const SpanishTranslation: TTranslation = {
     },
     scales: {
       firstName: "Nombre",
+      login: "Início",
+      logout: "Fim",
+      breaks: "Pausas",
+      extraHours: "Horas Extras",
       lastName: "Apellido",
       baseUserId: "ID del Usuario Base",
     },
@@ -221,6 +225,7 @@ const SpanishTranslation: TTranslation = {
       breaks: "Descansos",
     },
     services: {
+      date: "Data",
       attempts: "Intentos",
       hour: "Hora",
       answereds: "Atendidas",
@@ -240,6 +245,9 @@ const SpanishTranslation: TTranslation = {
       hitRate: "Tasa de Éxito",
     },
     charts: {
+      adherence: "Aderência",
+      name: "Nome",
+      totalExtraHours: "Total de Horas Extras",
       totalOperationBreakWorkedTime: "Total de Pausa Trabalhada da Operação",
       totalOperationLoggedTime: "Total de Tempo Logado da Operação",
       totalOperationScaledTime: "Total de Tempo Escala da Operação",

@@ -217,6 +217,10 @@ declare const EnglishTranslation: {
         scales: {
             firstName: string;
             lastName: string;
+            login: string;
+            logout: string;
+            breaks: string;
+            extraHours: string;
             baseUserId: string;
         };
         scalesgroups: {
@@ -228,6 +232,7 @@ declare const EnglishTranslation: {
         services: {
             attempts: string;
             hour: string;
+            date: string;
             answereds: string;
             contact_right_person: string;
             contactRightPerson: string;
@@ -245,7 +250,10 @@ declare const EnglishTranslation: {
             hitRate: string;
         };
         charts: {
+            adherence: string;
+            name: string;
             absenteeism: string;
+            totalExtraHours: string;
             topAdherenceOffenders: string;
             mediumWorkGroupsAdherence: string;
             totalOperationBreakWorkedTime: string;
