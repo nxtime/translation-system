@@ -111,6 +111,8 @@ const EnglishTranslation = {
     tabs: {
       personal: "Personal",
       application: "Application",
+      hide: "Hide",
+      config: "Settings"
     },
     themes: {
       coffe: "Coffee",

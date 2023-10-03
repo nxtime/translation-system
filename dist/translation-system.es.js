@@ -149,7 +149,7 @@ function re(r, e, t) {
     a !== "__proto__" && a !== "constructor" && (a in r ? typeof r[a] == "string" || r[a] instanceof String || typeof e[a] == "string" || e[a] instanceof String ? t && (r[a] = e[a]) : re(r[a], e[a], t) : r[a] = e[a]);
   return r;
 }
-function w(r) {
+function C(r) {
   return r.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
 }
 var ge = {
@@ -842,7 +842,7 @@ class Ae {
       escapeValue: !0
     });
     const t = e.interpolation;
-    this.escape = t.escape !== void 0 ? t.escape : pe, this.escapeValue = t.escapeValue !== void 0 ? t.escapeValue : !0, this.useRawValueToEscape = t.useRawValueToEscape !== void 0 ? t.useRawValueToEscape : !1, this.prefix = t.prefix ? w(t.prefix) : t.prefixEscaped || "{{", this.suffix = t.suffix ? w(t.suffix) : t.suffixEscaped || "}}", this.formatSeparator = t.formatSeparator ? t.formatSeparator : t.formatSeparator || ",", this.unescapePrefix = t.unescapeSuffix ? "" : t.unescapePrefix || "-", this.unescapeSuffix = this.unescapePrefix ? "" : t.unescapeSuffix || "", this.nestingPrefix = t.nestingPrefix ? w(t.nestingPrefix) : t.nestingPrefixEscaped || w("$t("), this.nestingSuffix = t.nestingSuffix ? w(t.nestingSuffix) : t.nestingSuffixEscaped || w(")"), this.nestingOptionsSeparator = t.nestingOptionsSeparator ? t.nestingOptionsSeparator : t.nestingOptionsSeparator || ",", this.maxReplaces = t.maxReplaces ? t.maxReplaces : 1e3, this.alwaysFormat = t.alwaysFormat !== void 0 ? t.alwaysFormat : !1, this.resetRegExp();
+    this.escape = t.escape !== void 0 ? t.escape : pe, this.escapeValue = t.escapeValue !== void 0 ? t.escapeValue : !0, this.useRawValueToEscape = t.useRawValueToEscape !== void 0 ? t.useRawValueToEscape : !1, this.prefix = t.prefix ? C(t.prefix) : t.prefixEscaped || "{{", this.suffix = t.suffix ? C(t.suffix) : t.suffixEscaped || "}}", this.formatSeparator = t.formatSeparator ? t.formatSeparator : t.formatSeparator || ",", this.unescapePrefix = t.unescapeSuffix ? "" : t.unescapePrefix || "-", this.unescapeSuffix = this.unescapePrefix ? "" : t.unescapeSuffix || "", this.nestingPrefix = t.nestingPrefix ? C(t.nestingPrefix) : t.nestingPrefixEscaped || C("$t("), this.nestingSuffix = t.nestingSuffix ? C(t.nestingSuffix) : t.nestingSuffixEscaped || C(")"), this.nestingOptionsSeparator = t.nestingOptionsSeparator ? t.nestingOptionsSeparator : t.nestingOptionsSeparator || ",", this.maxReplaces = t.maxReplaces ? t.maxReplaces : 1e3, this.alwaysFormat = t.alwaysFormat !== void 0 ? t.alwaysFormat : !1, this.resetRegExp();
   }
   reset() {
     this.options && this.init(this.options);
@@ -967,7 +967,7 @@ function Pe(r) {
     formatOptions: t
   };
 }
-function C(r) {
+function w(r) {
   const e = {};
   return function(a, s, n) {
     const i = s + JSON.stringify(n);
@@ -979,32 +979,32 @@ class xe {
   constructor() {
     let e = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {};
     this.logger = O.create("formatter"), this.options = e, this.formats = {
-      number: C((t, a) => {
+      number: w((t, a) => {
         const s = new Intl.NumberFormat(t, {
           ...a
         });
         return (n) => s.format(n);
       }),
-      currency: C((t, a) => {
+      currency: w((t, a) => {
         const s = new Intl.NumberFormat(t, {
           ...a,
           style: "currency"
         });
         return (n) => s.format(n);
       }),
-      datetime: C((t, a) => {
+      datetime: w((t, a) => {
         const s = new Intl.DateTimeFormat(t, {
           ...a
         });
         return (n) => s.format(n);
       }),
-      relativetime: C((t, a) => {
+      relativetime: w((t, a) => {
         const s = new Intl.RelativeTimeFormat(t, {
           ...a
         });
         return (n) => s.format(n, a.range || "day");
       }),
-      list: C((t, a) => {
+      list: w((t, a) => {
         const s = new Intl.ListFormat(t, {
           ...a
         });
@@ -1022,7 +1022,7 @@ class xe {
     this.formats[e.toLowerCase().trim()] = t;
   }
   addCached(e, t) {
-    this.formats[e.toLowerCase().trim()] = C(t);
+    this.formats[e.toLowerCase().trim()] = w(t);
   }
   format(e, t, a) {
     let s = arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : {};
@@ -1251,7 +1251,7 @@ function se(r) {
 }
 function j() {
 }
-function we(r) {
+function Ce(r) {
   Object.getOwnPropertyNames(Object.getPrototypeOf(r)).forEach((t) => {
     typeof r[t] == "function" && (r[t] = r[t].bind(r));
   });
@@ -1261,7 +1261,7 @@ class I extends V {
     let e = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {}, t = arguments.length > 1 ? arguments[1] : void 0;
     if (super(), this.options = se(e), this.services = {}, this.logger = O, this.modules = {
       external: []
-    }, we(this), t && !this.isInitialized && !e.isClone) {
+    }, Ce(this), t && !this.isInitialized && !e.isClone) {
       if (!this.options.initImmediate)
         return this.init(e, t), this;
       setTimeout(() => {
@@ -1512,7 +1512,7 @@ b.init;
 b.loadResources;
 b.reloadResources;
 b.use;
-const Ce = b.changeLanguage;
+const we = b.changeLanguage;
 b.getFixedT;
 b.t;
 b.exists;
@@ -1632,7 +1632,9 @@ const Ie = (r, e) => b.t(r, e), Le = {
     "application-title": "Select a company and database",
     tabs: {
       personal: "Personal",
-      application: "Application"
+      application: "Application",
+      hide: "Hide",
+      config: "Settings"
     },
     themes: {
       coffe: "Coffee",
@@ -1973,7 +1975,9 @@ const Ie = (r, e) => b.t(r, e), Le = {
     "application-title": "Seleccione una empresa y una base de datos",
     tabs: {
       personal: "Personal",
-      application: "Aplicación"
+      application: "Aplicación",
+      hide: "Esconder",
+      config: "Configurações"
     },
     themes: {
       coffe: "Café",
@@ -2314,7 +2318,9 @@ const Ie = (r, e) => b.t(r, e), Le = {
     "application-title": "Selecione uma empresa e banco de dados",
     tabs: {
       personal: "Pessoal",
-      application: "Aplicação"
+      application: "Aplicação",
+      hide: "Esconder",
+      config: "Configurações"
     },
     themes: {
       coffe: "Café",
@@ -2554,7 +2560,7 @@ const Ie = (r, e) => b.t(r, e), Le = {
     }
   });
 }, Fe = (r) => {
-  Ce(r);
+  we(r);
 };
 export {
   Fe as changeAppTranslationLanguage,

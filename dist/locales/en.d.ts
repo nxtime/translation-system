@@ -111,6 +111,8 @@ declare const EnglishTranslation: {
         tabs: {
             personal: string;
             application: string;
+            hide: string;
+            config: string;
         };
         themes: {
             coffe: string;

@@ -113,6 +113,8 @@ const SpanishTranslation: TTranslation = {
     tabs: {
       personal: "Personal",
       application: "Aplicación",
+      hide: "Esconder",
+      config: "Configurações"
     },
     themes: {
       coffe: "Café",
